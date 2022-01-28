@@ -28,6 +28,7 @@ x % 1 == 1 # Zwraca 1 dla liczb nieparzystych
 `**` -  potęgowanie
 `-x` -  liczba przeciwna
 
+
 ### Operatory logiczne
 `==` - równe
 `!=` - różne
@@ -39,6 +40,7 @@ x % 1 == 1 # Zwraca 1 dla liczb nieparzystych
 `is` - jest
 `is not` - nie jest
 `in` - w
+
 
 ### Pętle
 ```python
@@ -52,6 +54,7 @@ while True:
 for x in range(10):
     print(x)
 ```
+
 
 ### Przydatne metody i funkcje wbudowane:
 `len()` - zliczania długość obiektu
