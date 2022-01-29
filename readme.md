@@ -31,9 +31,9 @@ x % 1 == 1 # Zwraca 1 dla liczb nieparzystych
 
 `/` - dzielenie
 
-`//` -  dzielenie całkowite
+`//` -  dzielenie całkowite, zwraca całości w dzielnej
 
-`%` -  dzielenie modulo, zwraca całości w dzielnej
+`%` -  dzielenie modulo, zwraca resztę z dzielenia
 
 `*` - mnożenie
 
