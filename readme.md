@@ -102,3 +102,7 @@ for x in range(10):
 `upper(), lower()` - zmienia litery na wielkie/małe
 
 `reverse()` - odwrócenie
+
+#TODO opisać moduł string
+
+#TODOprzydatne skroty pycharma
