@@ -1,3 +1,6 @@
+#TODO: opisać moduł string
+#TODO: przydatne skroty pycharma
+
 # a = 'eus', 'lua', 'aja'
 # b = 'Mateusz'
 #
