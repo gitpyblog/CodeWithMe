@@ -1,3 +1,17 @@
+class Mark:
+    """ Klasa kolorująca tekst """
+    SUCCESS = '\033[92m'  # GREEN
+    WARNING = '\033[93m'  # YELLOW
+    FAIL = '\033[91m'  # RED
+    LIGHTYELLOW = '\033[33m'
+    DARKGREY = '\033[90m'
+    LIGHTGREY = '\033[37m'
+    BOLD = '\033[1m'
+    UNDERLINED = '\033[4m'
+    REVERSED = "\033[7m"
+    RESET = '\033[0m'  # RESET COLOR
+
+
 def remove_punctuation(text: str) -> str:
     """ Funkcja usuwająca interpunkcje z przekazanego tekstu. """
     from string import punctuation
@@ -6,6 +20,10 @@ def remove_punctuation(text: str) -> str:
         remove_punctuation_from_txt = remove_punctuation_from_txt.replace(p, '')
 
     return remove_punctuation_from_txt
+
+
+def characters(text: str) -> int:
+    return len(text)
 
 
 def letters(text: str) -> int:
@@ -27,7 +45,7 @@ def words(text: str) -> int:
     return words_count
 
 
-def sentences(text):
+def sentences(text: str) -> list:
     sentence_endings = '.', '!', '?'
     endings_exceptions = {'itd.', 'itp.', 'al.', 'lek.', 'str.', 'ul.', 'np.', 'przyp.', 'ang.', 'art.', 'arch.', 'br.',
                           'bł.', 'cdn.', 'cyt.', 'dent.', 'dep.', 'doc.', 'dyr.', 'etc.', 'fot.', 'gen.', 'hab.',
