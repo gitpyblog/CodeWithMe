@@ -2,7 +2,7 @@ def remove_punctuation(text: str) -> str:
     """ Funkcja usuwająca interpunkcje z przekazanego tekstu. """
     from string import punctuation
     remove_punctuation_from_txt = text
-    for p in punctuation:  # punctuation z modułu string zawiera wszystkie znaki interpunkcyjne
+    for p in punctuation:
         remove_punctuation_from_txt = remove_punctuation_from_txt.replace(p, '')
 
     return remove_punctuation_from_txt
@@ -28,5 +28,25 @@ def words(text: str) -> int:
 
 
 def sentences(text):
-    return 5
-    # UWAGA! Zdanie może kończyć się kropką, znakiem zapytania lub wykrzyknikiem
+    sentence_endings = '.', '!', '?'
+    endings_exceptions = {'itd.', 'itp.', 'al.', 'lek.', 'str.', 'ul.', 'np.', 'przyp.', 'ang.', 'art.', 'arch.', 'br.',
+                          'bł.', 'cdn.', 'cyt.', 'dent.', 'dep.', 'doc.', 'dyr.', 'etc.', 'fot.', 'gen.', 'hab.',
+                          'inst.', 'inż.', 'jw.', 'ks.', 'lek.', 'm.in.', 'r.', }  # TODO: skróty dwukropkowe
+    endings_indexes = [-1]
+    sentences_list = list()
+
+    def sentence_slicer(endpoint):
+        x = text[endings_indexes[endpoint] + 1:endings_indexes[endpoint + 1] + 1].strip()
+        return x
+
+    for index, char in enumerate(text):
+        warunek = text[index - 5:index + 1]
+
+        if char in sentence_endings and any(x in warunek for x in endings_exceptions) is False:
+            endings_indexes.append(index)
+
+    for index, _ in enumerate(endings_indexes):
+        if endings_indexes[index] != endings_indexes[-1]:
+            sentences_list.append(sentence_slicer(index))
+
+    return sentences_list

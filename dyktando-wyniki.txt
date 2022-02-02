@@ -1,1 +1,1 @@
-Litery: 107, Słowa: 15, Zdania: 5
+Litery: 107, Słowa: 15, Zdania: ['Pierwsze zdanie.', 'Drugie zdanie, z przecinkiem.', 'Trzecie zdanie z wykrzyknikiem!', 'Czwarte zdanie to pytanie?', 'I ostatnie piąte zdanie.']
