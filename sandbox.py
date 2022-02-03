@@ -9,7 +9,7 @@ print(hello.lstrip('He'))  # Wycinamy podany ciąg od lewej
 print(hello.rstrip('ld'))  # Wycinamy podany ciąg od prawej
 print(hello.replace('Hello', 'Hi'))  # Zamieniamy w formatowanym ciągu jedną wartość na drugą
 
-animals = 'pies', 'kot', 'papuga'
-for index, animal in enumerate(animals, start=1):
+pets = 'pies', 'kot', 'papuga'
+for index, animal in enumerate(pets, start=1):
     print(f'{index} - {animal}')
 
