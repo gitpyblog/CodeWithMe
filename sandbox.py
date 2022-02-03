@@ -1,22 +1,15 @@
-#TODO: opisać moduł string
-#TODO: przydatne skroty pycharma
+hello = 'Hello - World'
+print(hello[2:])  # wycinamy od drugiego znaku
+print(hello[:2])  # wycinamy pierwsze dwa znaki
+print(hello[2:4])  # kroimy od drugiego do czwartego znaku
+print(hello[:-2])  # ucinamy ostatnie dwa znaki
+print(hello[:-1:-3])  # ucinamy od ostatniego do trzeciego znaku od końca
 
-# a = 'eus', 'lua', 'aja'
-# b = 'Mateusz'
-#
-# print(any(x in b for x in a))
+print(hello.lstrip('He'))  # Wycinamy podany ciąg od lewej
+print(hello.rstrip('ld'))  # Wycinamy podany ciąg od prawej
+print(hello.replace('Hello', 'Hi'))  # Zamieniamy w formatowanym ciągu jedną wartość na drugą
 
-
-def csv_reader():
-    for row in open('ortografia.csv', 'r', encoding='utf-8'):
-        yield row
-
-
-while True:
-    word = input('Słowo: ')
-    for i in csv_reader():
-        i = i.replace('\n', '')
-        if word == i:
-            print(f'Znalezione: {i}')
-            break
+animals = 'pies', 'kot', 'papuga'
+for index, animal in enumerate(animals, start=1):
+    print(f'{index} - {animal}')
 

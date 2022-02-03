@@ -13,7 +13,7 @@ with open('dyktando-wyniki.txt', 'w', encoding='utf-8') as plik_w:  # W tekście
     plik_w.write(wyniki)
 
 # Wydruk wyników analizy
-print(f'\n{Mark.REVERSED}Analizuje plik: {Mark.BOLD}{plik_w.name}{Mark.RESET}')
+print(f'\n{Mark.REVERSED}Analizuje plik: {Mark.BOLD}{plik.name}{Mark.RESET}')
 for index, sentence in enumerate(sentences(text_sample)):
     print(f'🟡({index + 1}) {sentence}')
 
