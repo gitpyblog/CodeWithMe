@@ -2,7 +2,7 @@ hello = 'Hello - World'
 print(hello[2:])  # wycinamy od drugiego znaku
 print(hello[:2])  # wycinamy pierwsze dwa znaki
 print(hello[2:4])  # kroimy od drugiego do czwartego znaku
-print(hello[:-2])  # ucinamy ostatnie dwa znaki
+print(hello[-2:])  # ucinamy ostatnie dwa znaki
 print(hello[:-1:-3])  # ucinamy od ostatniego do trzeciego znaku od końca
 
 print(hello.lstrip('He'))  # Wycinamy podany ciąg od lewej
