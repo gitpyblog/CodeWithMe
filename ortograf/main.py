@@ -1,6 +1,5 @@
 from Algorithms import *
 
-# Pierwsze zdanie. Drugie zdanie, z przecinkiem. Trzecie zdanie z wykrzyknikiem! Czwarte zdanie to pytanie? I ostatnie piąte zdanie.
 # W tekście mamy: 5 zdań, 15 słów i 107 liter
 
 # Odczyt pliku tekstowego do analizy

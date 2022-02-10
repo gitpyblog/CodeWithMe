@@ -71,7 +71,7 @@ def sentences(text: str) -> list:
     sentence_endings = '.', '!', '?'
     endings_exceptions = {'itd.', 'itp.', 'al.', 'lek.', 'str.', 'ul.', 'np.', 'przyp.', 'ang.', 'art.', 'arch.', 'br.',
                           'bł.', 'cdn.', 'cyt.', 'dent.', 'dep.', 'doc.', 'dyr.', 'etc.', 'fot.', 'gen.', 'hab.',
-                          'inst.', 'inż.', 'jw.', 'ks.', 'lek.', 'm.in.', 'r.', }  # TODO: skróty dwukropkowe
+                          'inst.', 'inż.', 'jw.', 'ks.', 'lek.', 'm.in.', 'r.', }
     endings_indexes = [-1]
     sentences_list = list()
 
@@ -96,3 +96,4 @@ def test_sentences():
     assert result == ['Pierwsze zdanie.', 'Drugie zdanie, z przecinkiem.', 'Trzecie zdanie z wykrzyknikiem!',
                       'Czwarte zdanie to pytanie?', 'I ostatnie piąte zdanie.']
     assert type(result) == list
+
