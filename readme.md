@@ -1,4 +1,5 @@
 ### Podstawowe struktury danych
+
 `None` - wartość nieokreślona
 
 `str` - ciąg znaków
@@ -17,14 +18,13 @@
 
 `dict` - słownik, zbiór kluczy z wartościami
 
-
 ```python
 x % 2 == 0  # Zwraca 0 dla liczb parzystych
 x % 1 == 1 # Zwraca 1 dla liczb nieparzystych
 ```
 
-
 ### Operatory arytmetyczne
+
 `+` - dodawanie
 
 `-` -   odejmowanie
@@ -41,8 +41,8 @@ x % 1 == 1 # Zwraca 1 dla liczb nieparzystych
 
 `-x` -  liczba przeciwna
 
-
 ### Operatory logiczne
+
 `==` - równe
 
 `!=` - różne
@@ -63,8 +63,8 @@ x % 1 == 1 # Zwraca 1 dla liczb nieparzystych
 
 `in` - w
 
-
 ### Pętle
+
 ```python
 while True:
     number = 1
@@ -77,8 +77,8 @@ for x in range(10):
     print(x)
 ```
 
-
 ### Przydatne metody i funkcje wbudowane:
+
 `len()` - zliczania długość obiektu
 
 `count()` - zlicza ilość wystąpień danego argumenty w sprawdzanej wartości
@@ -102,3 +102,24 @@ for x in range(10):
 `upper(), lower()` - zmienia litery na wielkie/małe
 
 `reverse()` - odwrócenie
+
+
+### Przykładowe fragmenty kodu
+
+```python
+hello = 'Hello - World'
+print(hello[2:])  # wycinamy od drugiego znaku
+print(hello[:2])  # wycinamy pierwsze dwa znaki
+print(hello[2:4])  # kroimy od drugiego do czwartego znaku
+print(hello[-2:])  # ucinamy ostatnie dwa znaki
+print(hello[:-1:-3])  # ucinamy od ostatniego do trzeciego znaku od końca
+
+print(hello.lstrip('He'))  # Wycinamy podany ciąg od lewej
+print(hello.rstrip('ld'))  # Wycinamy podany ciąg od prawej
+print(hello.replace('Hello', 'Hi'))  # Zamieniamy w formatowanym ciągu jedną wartość na drugą
+
+pets = 'pies', 'kot', 'papuga'
+for index, animal in enumerate(pets, start=1):
+    print(f'{index} - {animal}')
+
+```

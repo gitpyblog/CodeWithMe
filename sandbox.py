@@ -1,14 +1,18 @@
-hello = 'Hello - World'
-print(hello[2:])  # wycinamy od drugiego znaku
-print(hello[:2])  # wycinamy pierwsze dwa znaki
-print(hello[2:4])  # kroimy od drugiego do czwartego znaku
-print(hello[-2:])  # ucinamy ostatnie dwa znaki
-print(hello[:-1:-3])  # ucinamy od ostatniego do trzeciego znaku od końca
+def dodawanie(a,b):
+    return a + b
 
-print(hello.lstrip('He'))  # Wycinamy podany ciąg od lewej
-print(hello.rstrip('ld'))  # Wycinamy podany ciąg od prawej
-print(hello.replace('Hello', 'Hi'))  # Zamieniamy w formatowanym ciągu jedną wartość na drugą
+print(dodawanie(2,3))
 
-pets = 'pies', 'kot', 'papuga'
-for index, animal in enumerate(pets, start=1):
-    print(f'{index} - {animal}')
+def test_dodawanie():
+    # given
+    par_a = 2
+    par_b = 3
+
+    # when
+    result = dodawanie(par_a, par_b)
+
+    # then
+    assert result == 6
+
+
+
