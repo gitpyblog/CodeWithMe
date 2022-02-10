@@ -12,4 +12,3 @@ print(hello.replace('Hello', 'Hi'))  # Zamieniamy w formatowanym ciągu jedną w
 pets = 'pies', 'kot', 'papuga'
 for index, animal in enumerate(pets, start=1):
     print(f'{index} - {animal}')
-

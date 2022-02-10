@@ -1,3 +1,4 @@
+# koloruje tekst w terminalu
 class Mark:
     """ Klasa kolorująca tekst """
     SUCCESS = '\033[92m'  # GREEN
@@ -12,6 +13,7 @@ class Mark:
     RESET = '\033[0m'  # RESET COLOR
 
 
+# Oczyszczanie ze znaków interpunkcyjnych
 def remove_punctuation(text: str) -> str:
     """ Funkcja usuwająca interpunkcje z przekazanego tekstu. """
     from string import punctuation
@@ -22,10 +24,12 @@ def remove_punctuation(text: str) -> str:
     return remove_punctuation_from_txt
 
 
+# Liczy znaki
 def characters(text: str) -> int:
     return len(text)
 
 
+# Liczy litery
 def letters(text: str) -> int:
     """ Funkcja zliczająca litery w przekazanym tekście. """
     text_check = remove_punctuation(text)
@@ -34,6 +38,7 @@ def letters(text: str) -> int:
     return len(text_check)
 
 
+# Liczy słowa
 def words(text: str) -> int:
     """ Funkcja zwracająca ilość słów w przekazanym tekście. """
     text_check = remove_punctuation(text)
@@ -45,6 +50,7 @@ def words(text: str) -> int:
     return words_count
 
 
+# Liczy zdania
 def sentences(text: str) -> list:
     sentence_endings = '.', '!', '?'
     endings_exceptions = {'itd.', 'itp.', 'al.', 'lek.', 'str.', 'ul.', 'np.', 'przyp.', 'ang.', 'art.', 'arch.', 'br.',
@@ -58,9 +64,7 @@ def sentences(text: str) -> list:
         return x
 
     for index, char in enumerate(text):
-        warunek = text[index - 5:index + 1]
-
-        if char in sentence_endings and any(x in warunek for x in endings_exceptions) is False:
+        if char in sentence_endings and any(x in text[index - 5:index + 1] for x in endings_exceptions) is False:
             endings_indexes.append(index)
 
     for index, _ in enumerate(endings_indexes):

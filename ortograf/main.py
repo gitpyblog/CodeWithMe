@@ -15,7 +15,7 @@ with open('dyktando-wyniki.txt', 'w', encoding='utf-8') as plik_w:  # W tekście
 # Wydruk wyników analizy
 print(f'\n{Mark.REVERSED}Analizuje plik: {Mark.BOLD}{plik.name}{Mark.RESET}')
 for index, sentence in enumerate(sentences(text_sample)):
-    print(f'🟡({index + 1}) {sentence}')
+    print(f'{Mark.DARKGREY}({index + 1}){Mark.RESET} {sentence}')
 
 print(f'\n{Mark.BOLD}{Mark.LIGHTYELLOW}Podsumowanie:{Mark.RESET}')
 print(f'Znaków: {Mark.BOLD}{characters(text_sample)}{Mark.RESET}')
