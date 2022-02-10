@@ -45,6 +45,7 @@ def test_letters():
     assert type(result) == int
 
 
+# Liczy słowa
 def words(text: str) -> int:
     """ Funkcja zwracająca ilość słów w przekazanym tekście. """
     text_check = remove_punctuation(text)
