@@ -1,3 +1,5 @@
+# WSZYTKO DZIAŁA GRATULACJE!
+
 # koloruje tekst w terminalu
 class Mark:
     """ Klasa kolorująca tekst """
