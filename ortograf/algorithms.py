@@ -40,13 +40,6 @@ def letters(text: str) -> int:
     return len(text_check)
 
 
-def test_letters():
-    string_test = 'Pierwsze zdanie. Drugie zdanie, z przecinkiem. Trzecie zdanie z wykrzyknikiem! Czwarte zdanie to pytanie? I ostatnie piąte zdanie.'
-    result = letters(string_test)
-    assert result == 107
-    assert type(result) == int
-
-
 # Liczy słowa
 def words(text: str) -> int:
     """ Funkcja zwracająca ilość słów w przekazanym tekście. """
@@ -57,13 +50,6 @@ def words(text: str) -> int:
             words_count += 1
 
     return words_count
-
-
-def test_words():
-    string_test = 'Pierwsze zdanie. Drugie zdanie, z przecinkiem. Trzecie zdanie z wykrzyknikiem! Czwarte zdanie to pytanie? I ostatnie piąte zdanie.'
-    result = words(string_test)
-    assert result == 15
-    assert type(result) == int
 
 
 # Liczy zdania
@@ -89,11 +75,4 @@ def sentences(text: str) -> list:
 
     return sentences_list
 
-
-def test_sentences():
-    string_test = 'Pierwsze zdanie. Drugie zdanie, z przecinkiem. Trzecie zdanie z wykrzyknikiem! Czwarte zdanie to pytanie? I ostatnie piąte zdanie.'
-    result = sentences(string_test)
-    assert result == ['Pierwsze zdanie.', 'Drugie zdanie, z przecinkiem.', 'Trzecie zdanie z wykrzyknikiem!',
-                      'Czwarte zdanie to pytanie?', 'I ostatnie piąte zdanie.']
-    assert type(result) == list
 

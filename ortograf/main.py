@@ -1,6 +1,4 @@
-from Algorithms import *
-
-# W tekście mamy: 5 zdań, 15 słów i 107 liter
+from algorithms import *
 
 # Odczyt pliku tekstowego do analizy
 with open('dyktando.txt', 'r', encoding='utf-8') as plik:
