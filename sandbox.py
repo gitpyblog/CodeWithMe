@@ -1,18 +1,7 @@
-def dodawanie(a,b):
-    return a + b
+from string import *
+from ortograf.algorithms import *
 
-print(dodawanie(2,3))
+p = 'Ala ma kota' + punctuation
 
-def test_dodawanie():
-    # given
-    par_a = 2
-    par_b = 3
-
-    # when
-    result = dodawanie(par_a, par_b)
-
-    # then
-    assert result == 6
-
-
-
+print(p)
+print(remove_punctuation(p))

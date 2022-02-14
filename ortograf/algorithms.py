@@ -74,5 +74,3 @@ def sentences(text: str) -> list:
             sentences_list.append(sentence_slicer(index))
 
     return sentences_list
-
-
