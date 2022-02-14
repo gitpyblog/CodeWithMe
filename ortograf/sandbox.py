@@ -1,11 +1,6 @@
 # TODO: opisać moduł string
 # TODO: przydatne skroty pycharma
 
-# a = 'eus', 'lua', 'aja'
-# b = 'Mateusz'
-#
-# print(any(x in b for x in a))
-
 # def csv_reader():
 #     for row in open('ortografia.csv', 'r', encoding='utf-8'):
 #         yield row
