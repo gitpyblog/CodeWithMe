@@ -6,10 +6,10 @@ string_test = 'Pierwsze zdanie. Drugie zdanie, z przecinkiem. Trzecie zdanie z w
 
 def test_remove_punctuation():
     from string import punctuation
-    before_remove_punctuation = 'Ala ma kota' + punctuation  # Ala ma kota!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
-    after_remove_punctuation = 'Ala ma kota'  # Ala ma kota
-    result = remove_punctuation(before_remove_punctuation)
-    assert result == after_remove_punctuation
+    before = 'Ala ma kota' + punctuation  # Ala ma kota!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
+    after = 'Ala ma kota'  # Ala ma kota
+    result = remove_punctuation(before)
+    assert result == after
 
 
 def test_characters():
@@ -31,10 +31,22 @@ def test_words():
 
 
 def test_sentences():
-    result = sentences(string_test)
-    assert result == ['Pierwsze zdanie.',
-                      'Drugie zdanie, z przecinkiem.',
-                      'Trzecie zdanie z wykrzyknikiem!',
-                      'Czwarte zdanie to pytanie?',
-                      'I ostatnie piąte zdanie.']
+    before = '''
+    Pierwsze zdanie. 
+    Drugie zdanie, z przecinkiem. 
+    Trzecie zdanie z wykrzyknikiem! 
+    Czwarte zdanie to pytanie? 
+    I ostatnie piąte zdanie. 
+    Dodatkowe zdanie nr 6 w którym skrót itp. także jest!'''
+
+    after = [
+        'Pierwsze zdanie.',
+        'Drugie zdanie, z przecinkiem.',
+        'Trzecie zdanie z wykrzyknikiem!',
+        'Czwarte zdanie to pytanie?',
+        'I ostatnie piąte zdanie.',
+        'Dodatkowe zdanie nr 6 w którym skrót itp. także jest!']
+
+    result = sentences(before)
+    assert result == after
     assert type(result) == list
