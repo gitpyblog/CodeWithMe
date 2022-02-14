@@ -65,7 +65,7 @@ def sentences(text: str) -> list:
         x = text[endings_indexes[endpoint] + 1:endings_indexes[endpoint + 1] + 1].strip()
         return x
 
-    for index, char in enumerate(text):
+    for index, char in enumerate(text):  # todo: zapytać o linijkę
         if char in sentence_endings and any(x in text[index - 5:index + 1] for x in endings_exceptions) is False:
             endings_indexes.append(index)
 
