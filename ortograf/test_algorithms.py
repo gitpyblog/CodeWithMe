@@ -6,8 +6,8 @@ string_test = 'Pierwsze zdanie. Drugie zdanie, z przecinkiem. Trzecie zdanie z w
 
 def test_remove_punctuation():
     from string import punctuation
-    before = 'Ala ma kota' + punctuation
-    after = 'Ala ma kota'
+    before = 'Ala ma kota' + punctuation  # Ala ma kota!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
+    after = 'Ala ma kota'  # Ala ma kota
     result = remove_punctuation(before)
     assert result == after
 
