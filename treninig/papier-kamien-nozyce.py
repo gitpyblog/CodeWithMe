@@ -18,24 +18,23 @@ class Mark:
 
 while True:
     ja = input('\nWybierz kamień, papier lub nożyce: ')
-    lista = ('kamień', 'papier', 'nożyce')
-    komputer = choice(lista)
-    win = ('REMIS', 'WYGRAŁEŚ', 'PRZEGRAŁEŚ')
+    komputer = choice(('kamień', 'papier', 'nożyce'))
+    winer = ('REMIS', 'WYGRAŁEŚ', 'PRZEGRAŁEŚ')
 
     if ja == komputer:
-        print(f'{Mark.YELLOW}{win[0]}{Mark.LIGHTGREY} ({ja} vs {komputer}{Mark.RESET})')
+        print(f'{Mark.YELLOW}{winer[0]}{Mark.LIGHTGREY} ({ja} vs {komputer}{Mark.RESET})')
     elif ja == 'kamień' and komputer == 'papier':
-        print(f'{Mark.RED}{win[2]}{Mark.LIGHTGREY} ({ja} vs {komputer}{Mark.RESET})')
+        print(f'{Mark.RED}{winer[2]}{Mark.LIGHTGREY} ({ja} vs {komputer}{Mark.RESET})')
     elif ja == 'kamień' and komputer == 'nożyce':
-        print(f'{Mark.GREEN}{win[1]}{Mark.LIGHTGREY} ({ja} vs {komputer}{Mark.RESET})')
+        print(f'{Mark.GREEN}{winer[1]}{Mark.LIGHTGREY} ({ja} vs {komputer}{Mark.RESET})')
     elif ja == 'papier' and komputer == 'nożyce':
-        print(f'{Mark.RED}{win[2]}{Mark.LIGHTGREY} ({ja} vs {komputer}{Mark.RESET})')
+        print(f'{Mark.RED}{winer[2]}{Mark.LIGHTGREY} ({ja} vs {komputer}{Mark.RESET})')
     elif ja == 'papier' and komputer == 'kamień':
-        print(f'{Mark.GREEN}{win[1]}{Mark.LIGHTGREY} ({ja} vs {komputer}{Mark.RESET})')
+        print(f'{Mark.GREEN}{winer[1]}{Mark.LIGHTGREY} ({ja} vs {komputer}{Mark.RESET})')
     elif ja == 'nożyce' and komputer == 'kamień':
-        print(f'{Mark.RED}{win[2]}{Mark.LIGHTGREY} ({ja} vs {komputer}{Mark.RESET})')
+        print(f'{Mark.RED}{winer[2]}{Mark.LIGHTGREY} ({ja} vs {komputer}{Mark.RESET})')
     elif ja == 'nożyce' and komputer == 'papier':
-        print(f'{Mark.GREEN}{win[1]}{Mark.LIGHTGREY} ({ja} vs {komputer}{Mark.RESET})')
+        print(f'{Mark.GREEN}{winer[1]}{Mark.LIGHTGREY} ({ja} vs {komputer}{Mark.RESET})')
     elif ja == 'koniec':
         print(f'{Mark.BOLD}Koniec gry{Mark.RESET}')
         break
