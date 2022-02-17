@@ -39,4 +39,4 @@ while True:
         print(f'{Mark.BOLD}Koniec gry{Mark.RESET}')
         break
     else:
-        print(f"{Mark.LIGHTGREY}Wpisz: 'paper', 'kamień', 'nożyce' lub 'koniec' aby zakończyć{Mark.RESET}")
+        print(f"{Mark.LIGHTGREY}Wpisz: 'paper', 'kamień', 'nożyce' lub 'koniec' aby zakończyć grę.{Mark.RESET}")
