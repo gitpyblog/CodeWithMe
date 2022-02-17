@@ -20,18 +20,19 @@ while True:
 
     if you == computer:
         print(f'{winner[0]} {Mark.LIGHTGREY}({you} vs {computer}{Mark.RESET})')
-    elif you == 'kamień' and computer == 'papier':
-        print(f'{winner[2]} {Mark.LIGHTGREY}({you} vs {computer}{Mark.RESET})')
-    elif you == 'kamień' and computer == 'nożyce':
-        print(f'{winner[1]} {Mark.LIGHTGREY}({you} vs {computer}{Mark.RESET})')
-    elif you == 'papier' and computer == 'nożyce':
-        print(f'{winner[2]} {Mark.LIGHTGREY}({you} vs {computer}{Mark.RESET})')
-    elif you == 'papier' and computer == 'kamień':
-        print(f'{winner[1]} {Mark.LIGHTGREY}({you} vs {computer}{Mark.RESET})')
-    elif you == 'nożyce' and computer == 'kamień':
-        print(f'{winner[2]} {Mark.LIGHTGREY}({you} vs {computer}{Mark.RESET})')
     elif you == 'nożyce' and computer == 'papier':
         print(f'{winner[1]} {Mark.LIGHTGREY}({you} vs {computer}{Mark.RESET})')
+    elif you == 'kamień' and computer == 'nożyce':
+        print(f'{winner[1]} {Mark.LIGHTGREY}({you} vs {computer}{Mark.RESET})')
+    elif you == 'papier' and computer == 'kamień':
+        print(f'{winner[1]} {Mark.LIGHTGREY}({you} vs {computer}{Mark.RESET})')
+    elif you == 'kamień' and computer == 'papier':
+        print(f'{winner[2]} {Mark.LIGHTGREY}({you} vs {computer}{Mark.RESET})')
+    elif you == 'papier' and computer == 'nożyce':
+        print(f'{winner[2]} {Mark.LIGHTGREY}({you} vs {computer}{Mark.RESET})')
+    elif you == 'nożyce' and computer == 'kamień':
+        print(f'{winner[2]} {Mark.LIGHTGREY}({you} vs {computer}{Mark.RESET})')
+
     elif you == 'koniec':
         print(f'{Mark.BOLD}Koniec gry{Mark.RESET}')
         break
