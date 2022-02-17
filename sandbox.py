@@ -15,7 +15,7 @@ from random import sample, randint
 
 a = randint(4, 7)
 b = randint(4, 7)
-X = set(sample(range(10), a))  # sample określa ile razy ma powtarzać losowanie sample(przedział, ilośc powtórzeń)
+X = set(sample(range(10), a))  # sample określa ile razy ma powtarzać losowanie sample('przedział', ilość powtórzeń)
 Y = set(sample(range(10), b))
 
 
