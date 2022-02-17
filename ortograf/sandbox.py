@@ -14,3 +14,5 @@
 #             print(f'Znalezione: {i}')
 #             break
 #
+
+
