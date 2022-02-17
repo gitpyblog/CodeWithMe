@@ -37,10 +37,11 @@ def zad3(x, y):  # 3-4. Wypisz na ekran różnicę zbiorów X i Y oraz Y i X.
 def zad5():  # 5. Wypisz na ekran wartość najwyższego elementu w obu zbiorach.
     pass
 
+
 print(f'X: {X}  a:{a}')
 print(f'Y: {Y}  b:{b}')
 
 print('')
 print(zad1(X))  # zadnie 1
-print(zad2(X, Y))
-print(zad3(X, Y))
+print(zad2(X, Y))  # zadnie 2
+print(zad3(X, Y))  # zadnie 3 i 4
