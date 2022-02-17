@@ -20,7 +20,8 @@ while True:
         'computer': f'{Mark.RED}PRZEGRAŁEŚ{Mark.RESET} {Mark.LIGHTGREY}({you} vs {computer}){Mark.RESET}'
     }
 
-    if you == computer:
+    if \
+            you == computer:
         print(f'{winner["remis"]}')
 
     elif \
