@@ -15,25 +15,25 @@ while True:
     you: str = input('\nWybierz kamień, papier lub nożyce: ')
     computer: str = choice(('kamień', 'papier', 'nożyce'))
     winner = {
-        0: f'{Mark.YELLOW}REMIS{Mark.RESET} {Mark.LIGHTGREY}({you} vs {computer}{Mark.RESET})',
-        1: f'{Mark.GREEN}WYGRAŁEŚ{Mark.RESET} {Mark.LIGHTGREY}({you} vs {computer}{Mark.RESET})',
-        2: f'{Mark.RED}PRZEGRAŁEŚ{Mark.RESET} {Mark.LIGHTGREY}({you} vs {computer}{Mark.RESET})'
+        'remis': f'{Mark.YELLOW}REMIS{Mark.RESET} {Mark.LIGHTGREY}({you} vs {computer}{Mark.RESET})',
+        'you': f'{Mark.GREEN}WYGRAŁEŚ{Mark.RESET} {Mark.LIGHTGREY}({you} vs {computer}{Mark.RESET})',
+        'computer': f'{Mark.RED}PRZEGRAŁEŚ{Mark.RESET} {Mark.LIGHTGREY}({you} vs {computer}{Mark.RESET})'
     }
 
     if you == computer:
-        print(f'{winner[0]}')
+        print(f'{winner["remis"]}')
 
     elif \
             you == 'nożyce' and computer == 'papier' or \
             you == 'kamień' and computer == 'nożyce' or \
             you == 'papier' and computer == 'kamień':
-        print(f'{winner[1]}')
+        print(f'{winner["you"]}')
 
     elif \
             you == 'kamień' and computer == 'papier' or \
             you == 'papier' and computer == 'nożyce' or \
             you == 'nożyce' and computer == 'kamień':
-        print(f'{winner[2]}')
+        print(f'{winner["computer"]}')
 
     elif you == 'koniec':
         print(f'{Mark.BOLD}Koniec gry{Mark.RESET}')
