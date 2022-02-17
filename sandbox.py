@@ -23,7 +23,7 @@ Y = set(sample(range(10), b))
 def zad1(x):  # 1. Wypisz na ekran informację czy zbiór X zawiera liczbę 5.
     if 5 in x:
         return f'Zad1: 5 zwiera się w X: {X}'
-    if 5 not in x:
+    else:
         return f'Zad1: 5 nie zawiera się X: {X}'
 
 
