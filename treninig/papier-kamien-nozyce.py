@@ -12,24 +12,26 @@ class Mark:
 
 
 while True:
-    you = input('\nWybierz kamień, papier lub nożyce: ')
-    computer = choice(('kamień', 'papier', 'nożyce'))
-    winner = ('REMIS', 'WYGRAŁEŚ', 'PRZEGRAŁEŚ')
+    you: str = input('\nWybierz kamień, papier lub nożyce: ')
+    computer: str = choice(('kamień', 'papier', 'nożyce'))
+    winner = (f'{Mark.YELLOW}REMIS{Mark.RESET}',
+              f'{Mark.GREEN}WYGRAŁEŚ{Mark.RESET}',
+              f'{Mark.RED}PRZEGRAŁEŚ{Mark.RESET}')
 
     if you == computer:
-        print(f'{Mark.YELLOW}{winner[0]}{Mark.LIGHTGREY} ({you} vs {computer}{Mark.RESET})')
+        print(f'{winner[0]} {Mark.LIGHTGREY}({you} vs {computer}{Mark.RESET})')
     elif you == 'kamień' and computer == 'papier':
-        print(f'{Mark.RED}{winner[2]}{Mark.LIGHTGREY} ({you} vs {computer}{Mark.RESET})')
+        print(f'{winner[2]} {Mark.LIGHTGREY}({you} vs {computer}{Mark.RESET})')
     elif you == 'kamień' and computer == 'nożyce':
-        print(f'{Mark.GREEN}{winner[1]}{Mark.LIGHTGREY} ({you} vs {computer}{Mark.RESET})')
+        print(f'{winner[1]} {Mark.LIGHTGREY}({you} vs {computer}{Mark.RESET})')
     elif you == 'papier' and computer == 'nożyce':
-        print(f'{Mark.RED}{winner[2]}{Mark.LIGHTGREY} ({you} vs {computer}{Mark.RESET})')
+        print(f'{winner[2]} {Mark.LIGHTGREY}({you} vs {computer}{Mark.RESET})')
     elif you == 'papier' and computer == 'kamień':
-        print(f'{Mark.GREEN}{winner[1]}{Mark.LIGHTGREY} ({you} vs {computer}{Mark.RESET})')
+        print(f'{winner[1]} {Mark.LIGHTGREY}({you} vs {computer}{Mark.RESET})')
     elif you == 'nożyce' and computer == 'kamień':
-        print(f'{Mark.RED}{winner[2]}{Mark.LIGHTGREY} ({you} vs {computer}{Mark.RESET})')
+        print(f'{winner[2]} {Mark.LIGHTGREY}({you} vs {computer}{Mark.RESET})')
     elif you == 'nożyce' and computer == 'papier':
-        print(f'{Mark.GREEN}{winner[1]}{Mark.LIGHTGREY} ({you} vs {computer}{Mark.RESET})')
+        print(f'{winner[1]} {Mark.LIGHTGREY}({you} vs {computer}{Mark.RESET})')
     elif you == 'koniec':
         print(f'{Mark.BOLD}Koniec gry{Mark.RESET}')
         break
