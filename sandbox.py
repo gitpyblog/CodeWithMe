@@ -18,11 +18,6 @@ b = randint(4, 7)
 X = set(sample(range(10), a))  # sample określa ile razy ma powtarzać losowanie sample(przedział, ilośc powtórzeń)
 Y = set(sample(range(10), b))
 
-print(f'a: {a}')
-print(f'X: {X}')
-print(f'b: {b}')
-print(f'Y: {Y}')
-
 
 def zad1(x):  # 1. Wypisz na ekran informację czy zbiór X zawiera liczbę 5.
     if 5 in x:
@@ -42,6 +37,8 @@ def zad3(x, y):  # 3-4. Wypisz na ekran różnicę zbiorów X i Y oraz Y i X.
 def zad5():  # 5. Wypisz na ekran wartość najwyższego elementu w obu zbiorach.
     pass
 
+print(f'X: {X}  a:{a}')
+print(f'Y: {Y}  b:{b}')
 
 print('')
 print(zad1(X))  # zadnie 1
