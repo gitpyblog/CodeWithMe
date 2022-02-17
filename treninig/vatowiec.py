@@ -1,4 +1,4 @@
-# napisz funkcję która będzie obliczała podaną przez User stawkę vat.
+# napisz funkcję która, będzie obliczała podaną przez User stawkę vat.
 
 class Mark:
     """ Klasa kolorująca tekst """
