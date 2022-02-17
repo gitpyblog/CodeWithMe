@@ -2,7 +2,6 @@
 # Wartości a oraz b to losowe liczby całkowite z przedziału <4,7>.
 # Zbiory powinny zawierać elementy o losowej wartości z przedziału <0,10>.
 # Następnie wykonaj następujące ćwiczenia:
-# zbiór X = a  I - a = 5, b = 7 <4,7> , II - 1, 2, 5, 7, 6)
 # 1. Wypisz na ekran informację czy zbiór X zawiera liczbę 5.
 # 2. Wypisz na ekran sumę zbiorów X oraz Y.
 # 3. Wypisz na ekran różnicę zbiorów X oraz Y.
@@ -11,6 +10,8 @@
 # 6. Usuń ze zbioru X pierwszy element i dołącz go do zbioru Y.
 # 7. Przekopiuj wszystkie elementy zbioru X do zbioru Y.
 # 8. Wypisz na ekran część wspólną zbiorów X oraz Y.
+
+
 from random import sample, randint
 
 a = randint(4, 7)
