@@ -15,9 +15,9 @@ while True:
     you: str = input('\nWybierz kamień, papier lub nożyce: ')
     computer: str = choice(('kamień', 'papier', 'nożyce'))
     winner = {
-        'remis': f'{Mark.YELLOW}REMIS{Mark.RESET} {Mark.LIGHTGREY}({you} vs {computer}){Mark.RESET}',
-        'you': f'{Mark.GREEN}WYGRAŁEŚ{Mark.RESET} {Mark.LIGHTGREY}({you} vs {computer}){Mark.RESET}',
-        'computer': f'{Mark.RED}PRZEGRAŁEŚ{Mark.RESET} {Mark.LIGHTGREY}({you} vs {computer}){Mark.RESET}'
+        'remis': f'{Mark.YELLOW}REMIS! {Mark.LIGHTGREY}({you} vs {computer}){Mark.RESET}',
+        'you': f'{Mark.GREEN}WYGRAŁEŚ! {Mark.LIGHTGREY}({you} vs {computer}){Mark.RESET}',
+        'computer': f'{Mark.RED}PRZEGRAŁEŚ! {Mark.LIGHTGREY}({you} vs {computer}){Mark.RESET}'
     }
 
     if \
