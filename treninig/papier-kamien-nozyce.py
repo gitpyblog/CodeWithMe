@@ -1,8 +1,3 @@
-# podajesz w terminalu kamień, papier, nożyce
-# komputer losuje swoje zagranie
-# Komputer porównuje Twoje ze swoim
-# Wyświetla wynik rundy
-# gra zaczyna się od nowa
 from random import choice
 
 
