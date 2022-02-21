@@ -27,7 +27,7 @@ def zad1(x):  # 1. Wypisz na ekran informację czy zbiór X zawiera liczbę 5.
         return f'Zad1: 5 nie zawiera się X: {X}'
 
 
-def zad2(x, y):  # 2. Wypisz na ekran sumę zbiorów X oraz Y.
+def zad2(x, y):  # 2. Wypisz na ekran sumę zbiorów X oraz Y
     return f'Zad2: Suma zbiorów X i Y to: {sum(x.union(y))} {x.union(y)}'
 
 
