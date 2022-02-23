@@ -1,6 +1,3 @@
-# STUDENT: imię, nazwisko, semestr, przedmioty
-
-
 def student(imie, nazwisko, semestr, *wykaz_przedmiotow, stypendium=False):
     def sprawdz_stypendium(x):
         if x is True:
