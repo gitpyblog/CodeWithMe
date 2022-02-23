@@ -7,6 +7,7 @@ class Color:
     BOLD = '\033[1m'  # POGRUBIENIE
     RESET = '\033[0m'  # RESET COLOR
 
+
 def student(imie, nazwisko, semestr, *wykaz_przedmiotow, stypendium=False):
     def sprawdz_stypendium(status):
         if status is True:
