@@ -8,8 +8,8 @@ class Color:
     RESET = '\033[0m'  # RESET COLOR
 
 
-def student(imie, nazwisko, semestr, *wykaz_przedmiotow, stypendium=False):
-    def sprawdz_stypendium(status):
+def student(imie, nazwisko, semestr, *przedmioty, stypendium=False):
+    def weryfikuj_stypendium(status):
         if status is True:
             return f'{Color.GREEN}Przyznane{Color.RESET}'
         else:
@@ -18,8 +18,8 @@ def student(imie, nazwisko, semestr, *wykaz_przedmiotow, stypendium=False):
     return (
         f'🟢 {imie} {nazwisko}, '
         f'student {semestr} semestru, '
-        f'wykaz przedmiotów: {", ".join(wykaz_przedmiotow)}. '
-        f'{Color.LIGHTGREY}{Color.BOLD}Stypendium:{Color.RESET} {sprawdz_stypendium(stypendium)}')
+        f'wykaz przedmiotów: {", ".join(przedmioty)}. '
+        f'{Color.LIGHTGREY}{Color.BOLD}Stypendium:{Color.RESET} {weryfikuj_stypendium(stypendium)}')
 
 
 janek = student('Janek', 'Kowalski', 2, 'matematyka', 'fizyka', 'biologia', 'chemia')
