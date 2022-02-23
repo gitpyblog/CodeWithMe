@@ -1,25 +1,15 @@
-class Color:
-    """ Klasa kolorująca tekst """
-    GREEN = '\033[92m'  # GREEN
-    RED = '\033[91m'  # RED
-    YELLOW = '\033[93m'  # YELLOW
-    LIGHTGREY = '\033[37m'
-    BOLD = '\033[1m'  # POGRUBIENIE
-    RESET = '\033[0m'  # RESET COLOR
-
-
 def student(imie, nazwisko, semestr, *przedmioty, stypendium=False):
     def weryfikuj_stypendium(status):
         if status is True:
-            return f'{Color.GREEN}Przyznane{Color.RESET}'
+            return '\033[92m'+'Przyznane'+'\033[0m'
         else:
-            return f'{Color.RED}Nieprzyznane{Color.RESET}'
+            return '\033[91m'+'Nieprzyznane'+'\033[0m'
 
     return (
         f'🟢 {imie} {nazwisko}, '
         f'student {semestr} semestru, '
         f'wykaz przedmiotów: {", ".join(przedmioty)}. '
-        f'{Color.LIGHTGREY}{Color.BOLD}Stypendium:{Color.RESET} {weryfikuj_stypendium(stypendium)}')
+        f'Stypendium: {weryfikuj_stypendium(stypendium)}')
 
 
 janek = student('Janek', 'Kowalski', 2, 'matematyka', 'fizyka', 'biologia', 'chemia')
