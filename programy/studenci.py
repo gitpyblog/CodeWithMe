@@ -17,4 +17,4 @@ iwona = student('Iwona', 'Kowalska', 3, 'zarządzanie', 'python', 'filozofia', s
 dawid = student('Dawid', 'Kowalski', 3, 'python', 'sql', 'matematyka')
 zofia = student('Zosia', 'Tolar', 4, 'historia', 'j. angielski', 'filozofia')
 
-print(f' {sebastian},\n {iwona},\n {dawid},\n {zofia},')
+print(f'\n{sebastian},\n {iwona},\n {dawid},\n {zofia},')
