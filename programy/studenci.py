@@ -14,7 +14,7 @@ def student(imie, nazwisko, semestr, *przedmioty, stypendium=False):
 
 janek = student('Janek', 'Kowalski', 2, 'matematyka', 'fizyka', 'biologia', 'chemia')
 iwona = student('Iwona', 'Kowalska', 3, 'zarządzanie', 'python', 'filozofia', stypendium=True)
-dawid = student('Dawid', 'Kowalski', 3, 'python', 'sql', 'matematyka')
+dawid = student('Dawid', 'Kowalski', 3, 'matematyka', 'algorytmika', 'logika')
 zofia = student('Zosia', 'Tolar', 4, 'historia', 'j. angielski', 'filozofia')
 
 print(f'\n{janek}\n{iwona}\n{dawid}\n{zofia}')
