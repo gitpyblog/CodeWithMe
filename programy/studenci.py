@@ -1,6 +1,6 @@
 def student(imie, nazwisko, semestr, *wykaz_przedmiotow, stypendium=False):
-    def sprawdz_stypendium(x):
-        if x is True:
+    def sprawdz_stypendium(status):
+        if status is True:
             return 'Przyznane'
         else:
             return 'Nieprzyznane'
