@@ -1,5 +1,6 @@
 def is_even(number: int) -> bool:
-    """Funkcja sprawdza, czy podana liczba jest parzysta
+    """
+    Funkcja sprawdza, czy podana liczba jest parzysta
 
     Args:
         number (int | float): liczba, którą weryfikujemy
