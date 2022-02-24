@@ -13,3 +13,9 @@ def is_even(number: int) -> bool:
         raise TypeError("Niepoprawna liczba")
 
     return True if number % 2 == 0 else False
+
+
+print(is_even('5'))
+
+# pystrat.pl
+# pycamp.pl
