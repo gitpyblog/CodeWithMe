@@ -16,6 +16,3 @@ def is_even(number: int) -> bool:
 
 
 print(is_even(5))
-
-# pystrat.pl
-# pycamp.pl
