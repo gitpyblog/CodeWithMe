@@ -1,3 +1,5 @@
+# ZADANIE 1 ==========================================================================================================
+
 # Napisz program, który utworzy dwa # X oraz Y, zbiór X zawiera a elementów, zbiór Y zawiera b elementów.
 # Wartości a oraz b to losowe liczby całkowite z przedziału <4,7>.
 # Zbiory powinny zawierać elementy o losowej wartości z przedziału <0,10>.
@@ -13,8 +15,6 @@
 
 
 from random import sample, randint
-
-import lista as lista
 
 a = randint(4, 7)
 b = randint(4, 7)
