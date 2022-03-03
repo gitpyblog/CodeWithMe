@@ -21,11 +21,11 @@ print(NFZ.union(krzyki), '(NFZ z krzykami)', len(NFZ.union(krzyki)))
 print(NFZ.union(chorzy_miesiac), '(NFZ chorzy miesiąc)', len(NFZ.union(chorzy_miesiac)))
 print(NFZ.union(chorzy_rok), '(NFZ chorzy rok)', len(NFZ.union(chorzy_rok)))
 
-for i in chorzy_rok:
-    NFZ.add(i)
 
-for i in chorzy_miesiac:
-    NFZ.add(i)
+def NFZ_update(szufladka):
+    for i in szufladka:
+        NFZ.add(i)
+
 
 for i in krzyki:
     NFZ.add(i)
@@ -36,3 +36,21 @@ for i in centrum:
 print('PODSUMOWANIE: ', NFZ, len(NFZ))
 
 # podzielmy zbiór na kobiety i mężczyzn wg peseli
+
+set_men = set()
+set_women = set()
+
+
+def sprawdz_plec(pesel):
+    person = str(pesel)
+    if int(person[2]) % 2 == 0:
+        set_men.add(pesel)
+    else:
+        set_women.add(pesel)
+
+
+for person in NFZ:
+    sprawdz_plec(str(person))
+
+print(f'MEN: {set_men}')
+print(f'WOMEN: {set_women}')

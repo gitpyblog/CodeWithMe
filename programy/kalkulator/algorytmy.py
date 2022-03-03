@@ -1,4 +1,4 @@
-def dodawanie(a,b):
+def dodawanie(a, b):
     """
 
     Args:
@@ -10,7 +10,8 @@ def dodawanie(a,b):
     """
     return a + b
 
-def odejmowanie(a,b):
+
+def odejmowanie(a, b):
     """
 
     Args:
@@ -22,7 +23,8 @@ def odejmowanie(a,b):
     """
     return a - b
 
-def mnozenie(a,b):
+
+def mnozenie(a, b):
     """
 
     Args:
@@ -34,7 +36,8 @@ def mnozenie(a,b):
     """
     return a * b
 
-def dzielenie(a,b):
+
+def dzielenie(a, b):
     """
 
     Args:
@@ -45,4 +48,3 @@ def dzielenie(a,b):
 
     """
     return a / b
-
