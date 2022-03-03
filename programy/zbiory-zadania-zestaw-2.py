@@ -27,11 +27,10 @@ def NFZ_update(szufladka):
         NFZ.add(i)
 
 
-for i in krzyki:
-    NFZ.add(i)
-
-for i in centrum:
-    NFZ.add(i)
+NFZ_update(chorzy_rok)
+NFZ_update(chorzy_miesiac)
+NFZ_update(krzyki)
+NFZ_update(centrum)
 
 print('PODSUMOWANIE: ', NFZ, len(NFZ))
 
