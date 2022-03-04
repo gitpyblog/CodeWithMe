@@ -1,16 +1,26 @@
 import requests
 
+
+class Waluta:
+    def __init__(self, code):
+        """
+        Klasa sprawdza aktualny kurs waluty z nbp.pl
+
+        Args:
+            code (str): trzyliterowy kod waluty.
+        """
+        waluta = requests.get(f'https://api.nbp.pl/api/exchangerates/rates/c/{code}/?format=json').json()
+        self.nazwa = waluta['currency']
+        self.data = waluta['rates'][0]['effectiveDate']
+        self.kup = waluta['rates'][0]['bid']
+        self.sprzedaj = waluta['rates'][0]['ask']
+
+
+usd = Waluta('usd')
+chf = Waluta('chf')
+eur = Waluta('eur')
 kurs_au_json = requests.get('https://api.nbp.pl/api/cenyzlota/?format=json').json()
-kurs_au_uncja = kurs_au_json[0]['cena'] * 32.1
-
-kurs_dolara_json = requests.get(f'https://api.nbp.pl/api/exchangerates/rates/c/usd/?format=json').json()
-kurs_dolara = kurs_dolara_json['rates'][0]['bid']
-
-kurs_euro_json = requests.get(f'https://api.nbp.pl/api/exchangerates/rates/c/eur/?format=json').json()
-kurs_euro = kurs_euro_json['rates'][0]['bid']
-
-kurs_frank_json = requests.get(f'https://api.nbp.pl/api/exchangerates/rates/c/chf/?format=json').json()
-kurs_frank = kurs_frank_json['rates'][0]['bid']
+kurs_au_uncja = kurs_au_json[0]['cena'] * 31.1034  # Uncja trojańska
 
 Portfel = {
     'Iwona': {
@@ -37,10 +47,13 @@ Portfel = {
     }
 }
 
-portfel = (Portfel['Iwona']['waluty']['usd'] * kurs_dolara) + \
-          (Portfel['Iwona']['waluty']['chf'] * kurs_frank) + \
-          (Portfel['Iwona']['waluty']['eur'] * kurs_euro) + \
+portfel = (Portfel['Iwona']['waluty']['usd'] * usd.sprzedaj) + \
+          (Portfel['Iwona']['waluty']['chf'] * chf.sprzedaj) + \
+          (Portfel['Iwona']['waluty']['eur'] * eur.sprzedaj) + \
           (Portfel['Iwona']['metale']['au'] * kurs_au_uncja) \
           + Portfel['Iwona']['waluty']['pln']
 
-print(f"{Portfel['Iwona']['imie']} łączna wartość w złotych Twojego portfela na dzień dzisiejszy to: {portfel} zł")
+print(f"{Portfel['Iwona']['imie']} łączna wartość Twojego portfela na dzień dzisiejszy to: {round(portfel, 2)} zł")
+
+print('W portfelu:')
+print()
