@@ -19,8 +19,8 @@ class Waluta:
 usd = Waluta('usd')
 chf = Waluta('chf')
 eur = Waluta('eur')
-kurs_au_json = requests.get('https://api.nbp.pl/api/cenyzlota/?format=json').json()
-kurs_au_uncja = kurs_au_json[0]['cena'] * 31.1034  # Uncja trojańska
+kurs_au = requests.get('https://api.nbp.pl/api/cenyzlota/?format=json').json()
+kurs_au = kurs_au[0]['cena'] * 31.1034  # Uncja trojańska
 
 Portfel = {
     'Iwona': {
@@ -50,7 +50,7 @@ Portfel = {
 portfel = (Portfel['Iwona']['waluty']['usd'] * usd.sprzedaj) + \
           (Portfel['Iwona']['waluty']['chf'] * chf.sprzedaj) + \
           (Portfel['Iwona']['waluty']['eur'] * eur.sprzedaj) + \
-          (Portfel['Iwona']['metale']['au'] * kurs_au_uncja) \
+          (Portfel['Iwona']['metale']['au'] * kurs_au) \
           + Portfel['Iwona']['waluty']['pln']
 
 print(f"{Portfel['Iwona']['imie']} łączna wartość Twojego portfela na dzień dzisiejszy to: {round(portfel, 2)} zł")
