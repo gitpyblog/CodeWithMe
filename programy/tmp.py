@@ -1,26 +1,5 @@
 import requests
 
-# jaka_waluta = input('Jaka walutę chcesz sprawdzić? ')
-# kurs_waluty = requests.get(f'https://api.nbp.pl/api/exchangerates/rates/c/{jaka_waluta}/?format=json').json()
-#
-# ask = kurs_waluty['rates'][0]['ask']
-# bid = kurs_waluty['rates'][0]['bid']
-
-# print(f'\nOdpowiedź z API https://api.nbp.pl/api/exchangerates/rates/c/usd/?format=json:\n{kurs_waluty}\n')
-# print(f"Aktualny kurs {kurs_waluty['currency']} na dzień {kurs_waluty['rates'][0]['effectiveDate']}:")
-# print(f"Sprzedaż: {ask} zł")
-# print(f"Skup: {bid} zł")
-
-# http://api.nbp.pl/api/cenyzlota/?format=json
-
-# kurs_zlota = requests.get('http://api.nbp.pl/api/cenyzlota/?format=json').json()
-
-
-# print(f'answer{kurs_zlota}')
-# print(kurs_zlota_uncja)
-
-
-# Portfel ####################################################
 kurs_au_json = requests.get('https://api.nbp.pl/api/cenyzlota/?format=json').json()
 kurs_au_uncja = kurs_au_json[0]['cena'] * 32.1
 
