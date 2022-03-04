@@ -1,8 +1,7 @@
-import json
 import requests
 
-response_get = requests.get('https://api.nbp.pl/api/exchangerates/rates/c/usd/?format=json')
-response_json = json.loads(response_get.text)
+response_json = requests.get('https://api.nbp.pl/api/exchangerates/rates/c/usd/?format=json').json()
+
 print(f'\nOdpowiedź z https://api.nbp.pl/api/exchangerates/rates/c/usd/?format=json:\n{response_json}\n')
 
 ask = response_json['rates'][0]['ask']
