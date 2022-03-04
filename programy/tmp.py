@@ -54,6 +54,4 @@ portfel = (Portfel['Iwona']['waluty']['usd'] * usd.sprzedaj) + \
           + Portfel['Iwona']['waluty']['pln']
 
 print(f"{Portfel['Iwona']['imie']} łączna wartość Twojego portfela na dzień dzisiejszy to: {round(portfel, 2)} zł")
-
-print('W portfelu:')
-print()
+print(kurs_au)
