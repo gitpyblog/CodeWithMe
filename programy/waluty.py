@@ -1,5 +1,9 @@
 import requests
 
+# TODO: rozszerzyć funkcjonalność o buy and sell
+# TODO: przechowywanie portfeli w osobnym pliku
+# TODO: obsługa innych metali
+
 kurs_au_json = requests.get('https://api.nbp.pl/api/cenyzlota/?format=json').json()
 kurs_au_uncja = kurs_au_json[0]['cena'] * 32.1
 
