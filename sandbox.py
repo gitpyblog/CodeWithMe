@@ -8,9 +8,16 @@ kurs_au_json = requests.get('https://api.nbp.pl/api/cenyzlota/?format=json').jso
 kurs_au_uncja = kurs_au_json[0]['cena'] * 32.1
 
 
-def aktualny_kurs(waluta, typ):
-    kurs_waluty = requests.get(f'https://api.nbp.pl/api/exchangerates/rates/c/{waluta}/?format=json').json()
-    return kurs_waluty['rates'][0][typ]
+def aktualny_kurs(typ, co):
+    metale = ['zloto', 'pallad', 'miedz']
+    waluty = ['usd', 'chf', 'eur']
+
+    if typ in waluty:
+        kurs = requests.get(f'https://api.nbp.pl/api/exchangerates/rates/c/{co}/?format=json').json()
+    if typ in metale:
+        kurs = requests.get(f'https://api.nbp.pl/api/{co}/?format=json').json()
+
+    return kurs
 
 
 Iwona = {
