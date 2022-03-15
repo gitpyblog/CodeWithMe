@@ -63,3 +63,5 @@ print(f'Łączna wartość w złotych portfela Iwony na dzień dzisiejszy to: {p
 print(round(portfel_Iwony, 2))  # zad. 1
 print(f'Łączna wartość w złotych portfela Dawida na dzień dzisiejszy to: {portfel_Dawida} zł')
 print(round(portfel_Dawida, 2))
+
+
