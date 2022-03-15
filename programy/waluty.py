@@ -1,3 +1,15 @@
+# imgw = requests.get('https://danepubliczne.imgw.pl/api/data/synop').json()
+#
+#
+# def pogoda(miasto, czynnik):
+#     for i in imgw:
+#         if i['stacja'] == miasto:
+#             print(i['stacja'])
+#             print(i[czynnik])
+#
+#
+# pogoda(input('podaj_nazwę_miasta: '), input('podaj_nazwe_klucza: '))
+
 import requests
 
 # TODO: rozszerzyć funkcjonalność o buy and sell
