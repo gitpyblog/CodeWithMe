@@ -21,17 +21,20 @@ def pogoda(miasto, czynnik):
         if i['stacja'] == miasto:
             cprint(i['stacja'], color=Pantone.ILLUMINATING)
 
-            if czynnik == 'temperatura':
-                if float(i['temperatura']) <= -1:
+            if czynnik == 'tmp':
+                temperatura = float(i['temperatura'])
+                if temperatura <= -1:
                     cprint(i['temperatura'], color=Pantone.CLASSIC_BLUE)
-                elif 0 >= float(i['temperatura']) >= 10:  # warunki brzegowe
+                elif 0 <= temperatura >= 10:  # warunki brzegowe
                     cprint(i['temperatura'], color=Bit4.BLUE)
-                elif 11 >= float(i['temperatura']) >= 20:
+                elif 11 <= temperatura >= 20:
                     cprint(i['temperatura'], color=Pantone.ILLUMINATING)
-                elif 21 >= float(i['temperatura']) >= 30:
+                elif 21 <= temperatura >= 30:
                     cprint(i['temperatura'], color=Pantone.LIVING_CORAL)
-                elif 31 >= float(i['temperatura']):
+                elif temperatura <= 31:
                     cprint(i['temperatura'], color=Bit4.RED)
+                else:
+                    print(i['temperatura'])
 
 
 pogoda(input('Podaj nazwę miasta: '), input('Podaj nazwe klucza: '))
