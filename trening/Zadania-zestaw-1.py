@@ -25,7 +25,7 @@ pass
 # Uzupełnij listę do 10 elementów z zakresu -100 do 100, jeśli w wyniku usunięcia powtórzeń ilość elementów zmniejszyła się
 pass
 
-# Pomnóż pierwszy element z listy z ostatnim elementem listy,
+# Pomnóż pierwszy element z listy z ostatnim elementem listy
 pass
 
 # Dodaj piąty element listy do trzeciego element od końca listy
