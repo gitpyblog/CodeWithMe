@@ -37,4 +37,4 @@ def pogoda(miasto, czynnik):
                     print(i['temperatura'])
 
 
-pogoda(input('Podaj nazwę miasta: '), input('Podaj nazwe klucza: '))
+pogoda(input('Podaj nazwę miasta: '), input('Podaj nazwę klucza: '))
