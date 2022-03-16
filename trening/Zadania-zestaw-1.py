@@ -1,7 +1,10 @@
 # Utwórz listę zawierającą 10 losowych liczb z zakresu od -100 do 100
 pass
 
-# W utworzonym liście znajdź największą i najmniejszą liczbę korzystając z pętli for
+# W utworzonym liście znajdź największą i najmniejszą liczbę
+pass
+
+# W utworzonym liście znajdź największą korzystając z pętli for
 pass
 
 # Podziel listę na dwie równe listy (a i b) zawierające po 5 elementów
