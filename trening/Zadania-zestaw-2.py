@@ -1,8 +1,18 @@
 # Napisz funckję sprawdzającą, czy podana liczba jest parzysta
-pass
+# Napisz dokumentację do tej funkcji
+def czy_parzysta(n):
+    """
+    Args:
+        n: przyjmuje liczbę do sprawdzenia
 
-# Napisz dokumentację do powyższej funkcji sprawdzającej parzystość liczby
-pass
+    Returns: zwraca True, jeśli parzysta i False, jeśli nieparzysta
+    """
+    n = int(n)
+    if n % 2 == 0:  # jeśli zero to parzysta
+        return True
+    else:
+        return False
+
 
 # Napisz funkcję, która przyjemnie dowolną ilość argumentów następnie je wszystkie wyświetli
 def argumenty(*args):
@@ -32,7 +42,22 @@ def circle(r):
 
 # Napisz program, który wylosuję liczbę od 1 do 100, a następnie będzie prosił użytkownika o jej odgadnięcie tak długo aż mu się to uda.
 # Program powinien informować użytkownika czy podana przez niego propozycja jest mniejsza, czy większa od zgadywanej.
-pass
+def losuj_liczbe():
+    from random import randint
+    i = randint(1, 100)
+    print('komputer wylosował: ', i)
+
+    while True:
+        x = int(input('podaj liczbę: '))
+        if i == x:
+            print('BRAVO! Odgadłeś liczbę.')
+            break
+        elif x > i:
+            print('liczba jest mniejsza niż podałeś: ')
+
+        else:
+            print('liczba jest większa niż podałeś: ')
+
 
 # Napisz funkcję, która ponumeruje wszystkie znaki w podanym przez użytkownika stringu, a następnie wyświetli numeracje
 def numeruj(tekst: str):
