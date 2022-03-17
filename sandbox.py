@@ -53,6 +53,3 @@ import naz as naz
 # print(dictionary)
 
 
-# 10gr wazy 2,51 g
-# cena tony cynku to 3 868
-
