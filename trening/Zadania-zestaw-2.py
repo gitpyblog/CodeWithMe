@@ -21,6 +21,7 @@ def argumenty(*args):
 
 
 # Napisz funkcję, który oblicza pole i obwód koła o promieniu podanym przez użytkownika.
+
 # Wartość stałej PI weź z biblioteki math. Promień nie może być ujemny.
 # W przypadku podania liczby ujemnej program powinien wyświetlić komunikat o błędzie.
 def circle(r):
