@@ -27,12 +27,13 @@
 #     break
 
 
-def logowanie(haslo):
-    test = haslo
-    while test != 'qwerty':
-        test = input('podaj hasło: ')
-    else:
-        print('zalogowano')
+# def logowanie(haslo):
+#     test = haslo
+#     while test != 'qwerty':
+#         test = input('podaj hasło: ')
+#     else:
+#         print('zalogowano')
+#
+#
+# logowanie(input('podaj hasło: '))
 
-
-logowanie(input('podaj hasło: '))
