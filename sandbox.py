@@ -27,8 +27,8 @@
 #     break
 
 
-def logowanie(password):
-    test = password
+def logowanie(haslo):
+    test = haslo
     while test != 'qwerty':
         test = input('podaj hasło: ')
     else:
