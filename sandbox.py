@@ -1,40 +1,38 @@
-import requests
-from coloratura import cprint, Pantone, Bit4
+# używając pętli for wypisz wszystkie sześciany liczb od 1 do 10
+# numbers = list(range(1, 11))
+# for i in numbers:
+#     i = i ** 3
+#     print(i, end=', ')
 
-# print('KLUCZE:'
-#       'id_stacji,'
-#       'stacja,'
-#       'data_pomiaru,'
-#       'godzina_pomiaru,'
-#       'temperatura,'
-#       'predkosc_wiatru,'
-#       'kierunek_wiatru,'
-#       'wilgotnosc_wzgledna',
-#       'suma_opadu,',
-#       'cisnienie')
+# używając pętli while wypisz wszystkie liczby podzielne przez 3, mniejsze od 50
+# l = 0
+# max = 50
+# while l < max:
+#     if l % 3 == 0:
+#         print(l, end=', ')
+#     l += 1
 
-imgw = requests.get('https://danepubliczne.imgw.pl/api/data/synop').json()
+# używając pętli if ... else sprawdz czy wylosowana liczba z przedziału (-100,100) jest dodatnia
+# import random
 
+# while True:
+#     liczba_los = random.randint(-100, 100)
+#     print(liczba_los)
+#     if liczba_los > 0:
+#         break
 
-def pogoda(miasto, czynnik):
-    for i in imgw:
-        if i['stacja'] == miasto:
-            cprint(i['stacja'], color=Pantone.ILLUMINATING)
-
-            if czynnik == 'tmp':
-                temperatura = float(i['temperatura'])
-                if temperatura <= -1:
-                    cprint(i['temperatura'], color=Pantone.CLASSIC_BLUE)
-                elif 0 <= temperatura >= 10:  # warunki brzegowe
-                    cprint(i['temperatura'], color=Bit4.BLUE)
-                elif 11 <= temperatura >= 20:
-                    cprint(i['temperatura'], color=Pantone.ILLUMINATING)
-                elif 21 <= temperatura >= 30:
-                    cprint(i['temperatura'], color=Pantone.LIVING_CORAL)
-                elif temperatura <= 31:
-                    cprint(i['temperatura'], color=Bit4.RED)
-                else:
-                    print(i['temperatura'])
+# liczba_los = random.randint(-100, 100)
+# while liczba_los > 0:
+#     print(liczba_los)
+#     break
 
 
-pogoda(input('Podaj nazwę miasta: '), input('Podaj nazwe klucza: '))
+def logowanie(haslo):
+    test = haslo
+    while test != 'qwerty':
+        test = input('podaj hasło: ')
+    else:
+        print('zalogowano')
+
+
+logowanie(input('podaj hasło: '))

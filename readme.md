@@ -18,28 +18,23 @@
 
 `dict` - słownik, zbiór kluczy z wartościami
 
-```python
-x % 2 == 0  # Zwraca 0 dla liczb parzystych
-x % 1 == 1 # Zwraca 1 dla liczb nieparzystych
-```
-
 ### Operatory arytmetyczne
 
 `+` - dodawanie
 
-`-` -   odejmowanie
+`-` - odejmowanie
 
 `/` - dzielenie
 
-`//` -  dzielenie całkowite, zwraca całości w dzielnej
+`//` - dzielenie całkowite, zwraca całości w dzielnej
 
-`%` -  dzielenie modulo, zwraca resztę z dzielenia
+`%` - dzielenie modulo, zwraca resztę z dzielenia
 
 `*` - mnożenie
 
-`**` -  potęgowanie
+`**` - potęgowanie
 
-`-x` -  liczba przeciwna
+`-x` - liczba przeciwna
 
 ### Operatory logiczne
 
@@ -102,7 +97,6 @@ for x in range(10):
 `upper(), lower()` - zmienia litery na wielkie/małe
 
 `reverse()` - odwrócenie
-
 
 ### Przykładowe fragmenty kodu
 
