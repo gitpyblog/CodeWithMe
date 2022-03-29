@@ -36,4 +36,3 @@
 #
 #
 # logowanie(input('podaj hasło: '))
-
