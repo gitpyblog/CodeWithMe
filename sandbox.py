@@ -28,9 +28,9 @@
 
 
 def logowanie(password):
-    p = password
-    while p != 'qwerty':
-        p = input('podaj hasło: ')
+    test = password
+    while test != 'qwerty':
+        test = input('podaj hasło: ')
     else:
         print('zalogowano')
 
