@@ -44,47 +44,40 @@
 # logowanie('qwerty', 3)
 #
 #
-def pass_valid(password, numbers=True, min_length=8):
-    specjalne = ['!', '@']
-    numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-    password = min_length
-
-    if len(password) >= 13:
-        print(f'hasło zwiera zbyt dużo znaków, {len(password)}')
-    elif len(password) < 8:
-        print(f'hasło zwiera zbyt mało znaków, {len(password)}')
-
-
-    if
-
-    else:
-        print(f'hasło nieprawidłowe, {password})
-
-
-        print('hasło nie zawiera wymaganych znaków: ')
-
-
-pass_valid('abc123ddddddd', numbers=True, min_length=8)  # upper=True, special=True
-
-# n = int(input('podaj liczbę: '))
-# # 5-9 -> '5-9'
-# # 10-15 -> '10-15'
-# # 16-20 -> '16-20'
-# # 5 6 7 8 9 10 11 12 13 14 15 16 17 19 20
-# if n in range(5, 9):
-#     print('w zakresie do 5 do 9')
-# elif n in range(10, 15):
-#     print('w zakresie od 10 do 15')
-# elif n in range(16, 20):
-#     print('w zakresie od 16 do 20')
+# def pass_valid(password, numbers=True, min_length=8):
+#     specjalne = ['!', '@']
+#     numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+#     password = min_length
 #
-# if n in range(0,30):
-#     print('w zakresie od 0 do 30')
+#     if len(password) >= 13:
+#         print(f'hasło zwiera zbyt dużo znaków, {len(password)}')
+#     elif len(password) < 8:
+#         print(f'hasło zwiera zbyt mało znaków, {len(password)}')
 #
-# if n % 2 == 0:
-#     print('parzysta')
-# else:
-#     print('nieparzysta')
+#
+#
+#
+# pass_valid('abc123ddddddd', numbers=True, min_length=8)  # upper=True, special=True
+
+n = int(input('podaj liczbę: '))
+# 5-9 -> '5-9'
+# 10-15 -> '10-15'
+# 16-20 -> '16-20'
+# 5 6 7 8 9 10 11 12 13 14 15 16 17 19 20
+if n in range(5, 9):
+    print('w zakresie do 5 do 9')
+elif n in range(10, 15):
+    print('w zakresie od 10 do 15')
+elif n in range(16, 20):
+    print('w zakresie od 16 do 20')
+
+if n in range(0,30):
+    print('w zakresie od 0 do 30')
+
+if n % 2 == 0:
+    print('parzysta')
+else:
+    print('nieparzysta')
 
 
 
