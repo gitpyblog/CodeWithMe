@@ -69,3 +69,5 @@ print(lista[0] * lista[-1])
 print(lista[4]+lista[-3])
 
 
+
+
