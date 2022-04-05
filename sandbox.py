@@ -95,10 +95,17 @@
 #
 # print(wyswietl_imie(n=nazwisko, i=imię, x=lista))
 
+n = [2, 3, 4, 5, 6, 7, 8]
+new_n = list(map(lambda x: x ** 2, n))
+
+print(n)
+print(new_n)
+
 # data = [('Ola', 22), ('Amber', 22), ('Alfred', 23), ('Skye', 4), ('Albert', 12), ('Amber', 22), ('Amber', 22)]
-data = [1, 1, 1, 2, 2, 2, 3, 3, 3]
-print(data)
-for x in data:
-    if data.count(x) > 1:
-        data.remove(x)
-print(data)
+# data = [1, 1, 1, 2, 2, 2, 3, 3, 3]
+# print(data)
+# for x in data:
+#     if data.count(x) > 1:
+#         data.remove(x)
+# print(data)
+
