@@ -94,18 +94,125 @@
 #
 #
 # print(wyswietl_imie(n=nazwisko, i=imię, x=lista))
-
-n = [2, 3, 4, 5, 6, 7, 8]
-new_n = list(map(lambda x: x ** 2, n))
-
-print(n)
-print(new_n)
+#
+# n = [2, 3, 4, 5, 6, 7, 8]
+# new_n = list(map(lambda x: x ** 2, n))
+#
+# print(n)
+# print(new_n)
 
 # data = [('Ola', 22), ('Amber', 22), ('Alfred', 23), ('Skye', 4), ('Albert', 12), ('Amber', 22), ('Amber', 22)]
-# data = [1, 1, 1, 2, 2, 2, 3, 3, 3]
+data = [-1, -2, 1, 2, 5, 5]
+
 # print(data)
-# for x in data:
-#     if data.count(x) > 1:
-#         data.remove(x)
+#
+#
+# def doubles(lista):
+#     new_list = list(map(lambda x: new_list.append(x) if (x not in new_list) else None, lista))
+#     print(new_list)
+#
+#
+# doubles(data)
 # print(data)
 
+# kwadrat = list(map(lambda x: x ** 2 if (x > 0) else None, data))
+
+# abs = 1, 2, 3, 4, 5
+#
+# #przykład:
+# def kwadrat(x):
+#     return x*x
+#
+# print(kwadrat(5))
+
+# wynik2 = list(map(lambda x: x+2, abs))
+# print(wynik2)
+# wyn = (lambda x: x * x)(5)
+# print(wyn)
+#
+# lam = lambda x : x*x
+# print(lam(5))
+#
+# lam2 = lambda x,y: x+y
+# print(lam2(2,3))
+#
+# print((lambda x,y: x+y)(5,6))
+# lambda x (ilość argumentów): x * xml
+# def fun(x):
+#     return x ** 2
+
+
+# print(list(map(fun, abs)))
+
+# new_list = []
+# new_list = map(lambda x: new_list.append(x) if (x not in new_list) else None, data)
+# print(list(new_list))
+
+# # Lambda function with if but without else.
+# square = lambda x: x * x if (x > 0)
+# print(square(6))
+# x = lambda a : a + 10
+# print(x(20))
+# x = lambda a, b : a * b
+# print(x(5, 6))
+#
+# def dodawanie(a):
+#     return a + 10
+#
+# data = 1, 2, 3, 5, 5
+#
+#
+# def funkcja(a, b):
+#     return a * b - b + 5
+#
+#
+# print(funkcja(4, 6))
+#
+# # lambda(argumenty:to co chcemy zrobić z argumentami)
+# funFunkcja = lambda a, b: a * b - b + 5
+# print(funFunkcja(4, 6))
+#
+#
+# def funkcja2(a):
+#     return lambda x: x * x + a  # (definujemy arg do lambdy)
+#
+#
+# print(funkcja2(3)(2))
+#
+# print(list(map(lambda x: x * 3, [3, 2, 5, 8, 2])))
+# print(list(map(lambda x: x * 3, data)))
+#
+# # map(co mam zrobić, elementy na których mam to zrobić) -> krótsza wersja pętli for
+
+# def funkcja (x):
+#     return x * 2
+# wynik = map(funkcja, liczby)
+# print(list(wynik))
+#
+# # Przykład map + lambda = stosować tam gdzie jest potrzebne użycie krótkiej logiki
+# # połączenie map + lambda pozwala zastąpić stosowanie pętli for oraz definiowania funkcji
+#
+# wynik2 = map(lambda x : x + 2, liczby)
+# print(list(wynik2))
+liczby = [-3, 2, 10, 12, 15, 20, 25, 30, 35]
+new_list = []
+
+def kwadrat(x):
+    return x ** 2
+
+
+# result = (map(kwadrat, liczby))
+# print(list(result))
+
+result = list(map(lambda x: kwadrat(x), liczby))
+result2 = list(map(lambda x: x ** 2 if x > 0 else None, liczby))
+new_list = list(map(lambda x: new_list.append(x)), liczby)
+print(result)
+print(result2)
+
+# new_list = map(lambda x: new_list.append(x) if (x not in new_list) else None, data)
+#
+# new_list = map()
+
+# result_filter = filter(lambda x : x % 1 == 0, liczby)
+# print(list(result_filter))
