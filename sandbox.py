@@ -79,4 +79,26 @@
 # else:
 #     print('nieparzysta')
 
+# imię = 'patryk'
+# nazwisko = 'kowalski'
+# lista = (1, 2, 3, 4, 5)
+#
+#
+# def wyswietl_imie(i, n, x):
+#     i = i.title()
+#     n = n.upper()
+#     if type(x) != list:
+#         print(f'to nie jest lista, to jest {type(x)}')
+#
+#     return (f'Twoje imię to: {i}, Twoje nazwisko to: {n}')
+#
+#
+# print(wyswietl_imie(n=nazwisko, i=imię, x=lista))
 
+# data = [('Ola', 22), ('Amber', 22), ('Alfred', 23), ('Skye', 4), ('Albert', 12), ('Amber', 22), ('Amber', 22)]
+data = [1, 1, 1, 2, 2, 2, 3, 3, 3]
+print(data)
+for x in data:
+    if data.count(x) > 1:
+        data.remove(x)
+print(data)
