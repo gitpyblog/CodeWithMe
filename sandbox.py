@@ -194,21 +194,21 @@ data = [-1, -2, 1, 2, 5, 5]
 #
 # wynik2 = map(lambda x : x + 2, liczby)
 # print(list(wynik2))
-liczby = [-3, 2, 10, 12, 15, 20, 25, 30, 35]
-new_list = []
-
-def kwadrat(x):
-    return x ** 2
+# liczby = [-3, 2, 10, 12, 15, 20, 25, 30, 35]
+# new_list = []
+#
+# def kwadrat(x):
+#     return x ** 2
 
 
 # result = (map(kwadrat, liczby))
 # print(list(result))
 
-result = list(map(lambda x: kwadrat(x), liczby))
-result2 = list(map(lambda x: x ** 2 if x > 0 else None, liczby))
-new_list = list(map(lambda x: new_list.append(x)), liczby)
-print(result)
-print(result2)
+# result = list(map(lambda x: kwadrat(x), liczby))
+# result2 = list(map(lambda x: x ** 2 if x > 0 else None, liczby))
+# new_list = list(map(lambda x: new_list.append(x)), liczby)
+# print(result)
+# print(result2)
 
 # new_list = map(lambda x: new_list.append(x) if (x not in new_list) else None, data)
 #
@@ -216,3 +216,11 @@ print(result2)
 
 # result_filter = filter(lambda x : x % 1 == 0, liczby)
 # print(list(result_filter))
+
+
+(lambda x, y, z: x + y + z)(1, 2, 3)
+(lambda x, y, z=3: x + y + z)(1, 2)
+(lambda x, y, z=3: x + y + z)(1, y=2)
+(lambda *args: sum(args))(1, 2, 3)
+(lambda **kwargs: sum(kwargs.values()))(one=1, two=2, three=3)
+(lambda x, *, y=0, z=0: x + y + z)(1, y=2, z=3)
