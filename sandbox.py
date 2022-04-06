@@ -218,9 +218,51 @@ data = [-1, -2, 1, 2, 5, 5]
 # print(list(result_filter))
 
 
-(lambda x, y, z: x + y + z)(1, 2, 3)
-(lambda x, y, z=3: x + y + z)(1, 2)
-(lambda x, y, z=3: x + y + z)(1, y=2)
-(lambda *args: sum(args))(1, 2, 3)
-(lambda **kwargs: sum(kwargs.values()))(one=1, two=2, three=3)
-(lambda x, *, y=0, z=0: x + y + z)(1, y=2, z=3)
+# (lambda x, y, z: x + y + z)(1, 2, 3)
+# (lambda x, y, z=3: x + y + z)(1, 2)
+# (lambda x, y, z=3: x + y + z)(1, y=2)
+# (lambda *args: sum(args))(1, 2, 3)
+# (lambda **kwargs: sum(kwargs.values()))(one=1, two=2, three=3)
+# (lambda x, *, y=0, z=0: x + y + z)(1, y=2, z=3)
+
+
+# liczby = [-3, 2, 10, 12, 15, 20, 25, 30, 35]
+#
+#
+# def liczenie(x, n):
+#     if x in liczby:
+#         print(f'{str(x)}\n' * n)
+#
+#
+# liczenie(10, 3)
+
+
+miasta = [
+    {'nazwa': 'Gdańsk',
+     'populacja': 5000},
+
+    {'nazwa': 'Wrocław',
+     'populacja': 20000},
+
+    {'nazwa': 'Kraków',
+     'populacja': 15000},
+
+    {'nazwa': 'Poznań',
+     'populacja': 3000}
+]
+
+
+'''
+Funkcja filter(test, kolekcja) tworzy nową listę elementów na podstawie wejściowej listy elementów, wybierając tylko te wartości,
+dla których funkcja testując zwróci prawdę (True)
+'''
+cities = list(filter(lambda city: city['populacja'] > 10000, miasta))  # filter wyszukuje wartości na liście wg reguły
+print(cities)
+
+
+'''
+Funkcja map(funkcja, kolekcja) wykonuje zadaną funkcje dla każdego elementu w przekazanej kolekcji.
+'''
+cities = list(map(lambda city: city['populacja'] + 20000, miasta))  # map modyfikuje wartości na liście
+print(cities)
+
