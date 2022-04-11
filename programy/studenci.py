@@ -12,6 +12,7 @@ def student(imie:str, nazwisko:str, semestr:int, *przedmioty, stypendium=False):
         f'Stypendium: {weryfikuj_stypendium(stypendium)}')
 
 
+
 janek = student('Janek', 'Kowalski', 2, 'matematyka', 'fizyka', 'biologia', 'chemia')
 iwona = student('Iwona', 'Kowalska', 3, 'zarządzanie', 'python', 'filozofia', stypendium=True)
 dawid = student('Dawid', 'Kowalski', 3, 'matematyka', 'algorytmika', 'logika')

@@ -102,6 +102,7 @@
 # print(new_n)
 
 # data = [('Ola', 22), ('Amber', 22), ('Alfred', 23), ('Skye', 4), ('Albert', 12), ('Amber', 22), ('Amber', 22)]
+
 data = [-1, -2, 1, 2, 5, 5]
 
 # print(data)
@@ -237,32 +238,61 @@ data = [-1, -2, 1, 2, 5, 5]
 # liczenie(10, 3)
 
 
-miasta = [
-    {'nazwa': 'Gdańsk',
-     'populacja': 5000},
+# miasta = [
+#     {'nazwa': 'Gdańsk',
+#      'populacja': 5000},
+#
+#     {'nazwa': 'Wrocław',
+#      'populacja': 20000},
+#
+#     {'nazwa': 'Kraków',
+#      'populacja': 15000},
+#
+#     {'nazwa': 'Poznań',
+#      'populacja': 3000}
+# ]
+#
+#
+# '''
+# Funkcja filter(funkcja_testująca, kolekcja) tworzy nową listę elementów na podstawie wejściowej listy elementów,
+# wybierając tylko te wartości, dla których funkcja testująca zwróci prawdę (True)
+# '''
+# cities = list(filter(lambda city: city['populacja'] > 10000, miasta))  # filter wyszukuje wartości na liście wg reguły
+# print(cities)
+#
+#
+# '''
+# Funkcja map(funkcja, kolekcja) wykonuje zadaną funkcje dla każdego elementu w przekazanej kolekcji.
+# '''
+# cities = list(map(lambda city: city['populacja'] + 20000, miasta))  # map modyfikuje wartości na liście
+# print(cities)
 
-    {'nazwa': 'Wrocław',
-     'populacja': 20000},
 
-    {'nazwa': 'Kraków',
-     'populacja': 15000},
+# lista = [7, 7, 7, 7, 1, 1, 2, 3, 4, 5, 5]
+#
+#
+# def doubbles(szufladka):
+#     new_list = []
+#     for i in szufladka:
+#         if i not in new_list:
+#             new_list.append(i)
+#     return new_list
+#
+#
+# print(doubbles(lista))
 
-    {'nazwa': 'Poznań',
-     'populacja': 3000}
-]
+# class Pies:
+#     def __init__(self, rasa, imie, wiek):
+#         self.rasa = rasa
+#         self.imie = imie
+#         self.wiek = wiek
+#
+#
+# Aron = Pies('Malmute', 'Aron', 13)
+# Fifek = Pies('Kundel', 'Fifek', 1)
+#
+# print(Aron.wiek)
+# print(Aron.imie, Aron.wiek)
 
 
-'''
-Funkcja filter(test, kolekcja) tworzy nową listę elementów na podstawie wejściowej listy elementów, wybierając tylko te wartości,
-dla których funkcja testując zwróci prawdę (True)
-'''
-cities = list(filter(lambda city: city['populacja'] > 10000, miasta))  # filter wyszukuje wartości na liście wg reguły
-print(cities)
-
-
-'''
-Funkcja map(funkcja, kolekcja) wykonuje zadaną funkcje dla każdego elementu w przekazanej kolekcji.
-'''
-cities = list(map(lambda city: city['populacja'] + 20000, miasta))  # map modyfikuje wartości na liście
-print(cities)
 
