@@ -103,7 +103,7 @@
 
 # data = [('Ola', 22), ('Amber', 22), ('Alfred', 23), ('Skye', 4), ('Albert', 12), ('Amber', 22), ('Amber', 22)]
 
-data = [-1, -2, 1, 2, 5, 5]
+# data = [-1, -2, 1, 2, 5, 5]
 
 # print(data)
 #
@@ -294,5 +294,33 @@ data = [-1, -2, 1, 2, 5, 5]
 # print(Aron.wiek)
 # print(Aron.imie, Aron.wiek)
 
+# ocena = 55
+#
+# if 50 <= ocena < 60:
+#     print('ok')
+#
+# if ocena >= 50 and ocena < 60:
+#     print('ok')
 
+# from datetime import date
+
+# day_week = ()
+# month = (slownik)
+# print(f'dzisiaj jest {day_week}: {datetime.datetime.now()})
+
+# data = date.today()
+#
+# day_week = {
+#     0: 'poniedziałek',
+#     1: 'wtorek',
+#     2: 'środa',
+#     3: 'czwartek',
+#     4: 'piątek',
+#     5: 'sobota',
+#     6: 'niedziela'
+# }
+# msc = {1: 'stycznia', 2: 'lutego', 3: 'marca', 4: 'kwietnia', 5: 'maja', 6: 'czerwca', 7: 'lipca', 8: 'sierpnia',
+#        9: 'września', 10: 'października', 11: 'listopada', 12: 'grudnia'}
+#
+# print(f'dziś jest {day_week[data.weekday()]} {data.day} {msc[data.month]} {data.year} rok')
 
