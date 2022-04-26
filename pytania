@@ -1,0 +1,341 @@
+# używając pętli for wypisz wszystkie sześciany liczb od 1 do 10
+# numbers = list(range(1, 11))
+# for i in numbers:
+#     i = i ** 3
+#     print(i, end=', ')
+
+# używając pętli while wypisz wszystkie liczby podzielne przez 3, mniejsze od 50
+# l = 0
+# max = 50
+# while l < max:
+#     if l % 3 == 0:
+#         print(l, end=', ')
+#     l += 1
+
+# używając pętli if ... else sprawdz czy wylosowana liczba z przedziału (-100,100) jest dodatnia
+# import random
+
+# while True:
+#     liczba_los = random.randint(-100, 100)
+#     print(liczba_los)
+#     if liczba_los > 0:
+#         break
+
+# liczba_los = random.randint(-100, 100)
+# while liczba_los > 0:
+#     print(liczba_los)
+#     break
+
+
+# def logowanie(haslo_user, max_log):
+#     proba_log = 1
+#     haslo = None
+#     while haslo != haslo_user:
+#         haslo = input(f'({proba_log} proba logowania) podaj hasło: ')
+#         proba_log += 1
+#         if proba_log > max_log:
+#             print(f'przekroczyłeś ilość dozwolonych prob logowania: ')
+#             break
+#     else:
+#         print('zalogowano')
+#         return True
+#
+#
+# logowanie('qwerty', 3)
+#
+#
+# def pass_valid(password, numbers=True, min_length=8):
+#     specjalne = ['!', '@']
+#     numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+#     password = min_length
+#
+#     if len(password) >= 13:
+#         print(f'hasło zwiera zbyt dużo znaków, {len(password)}')
+#     elif len(password) < 8:
+#         print(f'hasło zwiera zbyt mało znaków, {len(password)}')
+
+# pass_valid('abc123ddddddd', numbers=True, min_length=8)  # upper=True, special=True
+
+#
+# n = int(input('podaj liczbę: '))
+# # 5-9 -> '5-9'
+# # 10-15 -> '10-15'
+# # 16-20 -> '16-20'
+# # 5 6 7 8 9 10 11 12 13 14 15 16 17 19 20
+# if n in range(5, 9):
+#     print('w zakresie do 5 do 9')
+# elif n in range(10, 15):
+#     print('w zakresie od 10 do 15')
+# elif n in range(16, 20):
+#     print('w zakresie od 16 do 20')
+#
+#
+# if n in range(0, 30):
+#     print('w zakresie od 0 do 30')
+#
+#
+# if n % 2 == 0:
+#     print('parzysta')
+# else:
+#     print('nieparzysta')
+
+# imię = 'patryk'
+# nazwisko = 'kowalski'
+# lista = (1, 2, 3, 4, 5)
+#
+#
+# def wyswietl_imie(i, n, x):
+#     i = i.title()
+#     n = n.upper()
+#     if type(x) != list:
+#         print(f'to nie jest lista, to jest {type(x)}')
+#
+#     return (f'Twoje imię to: {i}, Twoje nazwisko to: {n}')
+#
+#
+# print(wyswietl_imie(n=nazwisko, i=imię, x=lista))
+#
+# n = [2, 3, 4, 5, 6, 7, 8]
+# new_n = list(map(lambda x: x ** 2, n))
+#
+# print(n)
+# print(new_n)
+
+# data = [('Ola', 22), ('Amber', 22), ('Alfred', 23), ('Skye', 4), ('Albert', 12), ('Amber', 22), ('Amber', 22)]
+
+# data = [-1, -2, 1, 2, 5, 5]
+
+# print(data)
+#
+#
+# def doubles(lista):
+#     new_list = list(map(lambda x: new_list.append(x) if (x not in new_list) else None, lista))
+#     print(new_list)
+#
+#
+# doubles(data)
+# print(data)
+
+# kwadrat = list(map(lambda x: x ** 2 if (x > 0) else None, data))
+
+# abs = 1, 2, 3, 4, 5
+#
+# #przykład:
+# def kwadrat(x):
+#     return x*x
+#
+# print(kwadrat(5))
+
+# wynik2 = list(map(lambda x: x+2, abs))
+# print(wynik2)
+# wyn = (lambda x: x * x)(5)
+# print(wyn)
+#
+# lam = lambda x : x*x
+# print(lam(5))
+#
+# lam2 = lambda x,y: x+y
+# print(lam2(2,3))
+#
+# print((lambda x,y: x+y)(5,6))
+# lambda x (ilość argumentów): x * xml
+# def fun(x):
+#     return x ** 2
+
+
+# print(list(map(fun, abs)))
+
+# new_list = []
+# new_list = map(lambda x: new_list.append(x) if (x not in new_list) else None, data)
+# print(list(new_list))
+
+# # Lambda function with if but without else.
+# square = lambda x: x * x if (x > 0)
+# print(square(6))
+# x = lambda a : a + 10
+# print(x(20))
+# x = lambda a, b : a * b
+# print(x(5, 6))
+#
+# def dodawanie(a):
+#     return a + 10
+#
+# data = 1, 2, 3, 5, 5
+#
+#
+# def funkcja(a, b):
+#     return a * b - b + 5
+#
+#
+# print(funkcja(4, 6))
+#
+# # lambda(argumenty:to co chcemy zrobić z argumentami)
+# funFunkcja = lambda a, b: a * b - b + 5
+# print(funFunkcja(4, 6))
+#
+#
+# def funkcja2(a):
+#     return lambda x: x * x + a  # (definujemy arg do lambdy)
+#
+#
+# print(funkcja2(3)(2))
+#
+# print(list(map(lambda x: x * 3, [3, 2, 5, 8, 2])))
+# print(list(map(lambda x: x * 3, data)))
+#
+# # map(co mam zrobić, elementy na których mam to zrobić) -> krótsza wersja pętli for
+
+# def funkcja (x):
+#     return x * 2
+# wynik = map(funkcja, liczby)
+# print(list(wynik))
+#
+# # Przykład map + lambda = stosować tam gdzie jest potrzebne użycie krótkiej logiki
+# # połączenie map + lambda pozwala zastąpić stosowanie pętli for oraz definiowania funkcji
+#
+# wynik2 = map(lambda x : x + 2, liczby)
+# print(list(wynik2))
+# liczby = [-3, 2, 10, 12, 15, 20, 25, 30, 35]
+# new_list = []
+#
+# def kwadrat(x):
+#     return x ** 2
+
+
+# result = (map(kwadrat, liczby))
+# print(list(result))
+
+# result = list(map(lambda x: kwadrat(x), liczby))
+# result2 = list(map(lambda x: x ** 2 if x > 0 else None, liczby))
+# new_list = list(map(lambda x: new_list.append(x)), liczby)
+# print(result)
+# print(result2)
+
+# new_list = map(lambda x: new_list.append(x) if (x not in new_list) else None, data)
+#
+# new_list = map()
+
+# result_filter = filter(lambda x : x % 1 == 0, liczby)
+# print(list(result_filter))
+
+
+# (lambda x, y, z: x + y + z)(1, 2, 3)
+# (lambda x, y, z=3: x + y + z)(1, 2)
+# (lambda x, y, z=3: x + y + z)(1, y=2)
+# (lambda *args: sum(args))(1, 2, 3)
+# (lambda **kwargs: sum(kwargs.values()))(one=1, two=2, three=3)
+# (lambda x, *, y=0, z=0: x + y + z)(1, y=2, z=3)
+
+
+# liczby = [-3, 2, 10, 12, 15, 20, 25, 30, 35]
+#
+#
+# def liczenie(x, n):
+#     if x in liczby:
+#         print(f'{str(x)}\n' * n)
+#
+#
+# liczenie(10, 3)
+
+
+# miasta = [
+#     {'nazwa': 'Gdańsk',
+#      'populacja': 5000},
+#
+#     {'nazwa': 'Wrocław',
+#      'populacja': 20000},
+#
+#     {'nazwa': 'Kraków',
+#      'populacja': 15000},
+#
+#     {'nazwa': 'Poznań',
+#      'populacja': 3000}
+# ]
+#
+#
+# '''
+# Funkcja filter(funkcja_testująca, kolekcja) tworzy nową listę elementów na podstawie wejściowej listy elementów,
+# wybierając tylko te wartości, dla których funkcja testująca zwróci prawdę (True)
+# '''
+# cities = list(filter(lambda city: city['populacja'] > 10000, miasta))  # filter wyszukuje wartości na liście wg reguły
+# print(cities)
+#
+#
+# '''
+# Funkcja map(funkcja, kolekcja) wykonuje zadaną funkcje dla każdego elementu w przekazanej kolekcji.
+# '''
+# cities = list(map(lambda city: city['populacja'] + 20000, miasta))  # map modyfikuje wartości na liście
+# print(cities)
+
+
+# lista = [7, 7, 7, 7, 1, 1, 2, 3, 4, 5, 5]
+#
+#
+# def doubbles(szufladka):
+#     new_list = []
+#     for i in szufladka:
+#         if i not in new_list:
+#             new_list.append(i)
+#     return new_list
+#
+#
+# print(doubbles(lista))
+
+# class Pies:
+#     def __init__(self, rasa, imie, wiek):
+#         self.rasa = rasa
+#         self.imie = imie
+#         self.wiek = wiek
+#
+#
+# Aron = Pies('Malmute', 'Aron', 13)
+# Fifek = Pies('Kundel', 'Fifek', 1)
+#
+# print(Aron.wiek)
+# print(Aron.imie, Aron.wiek)
+
+# ocena = 55
+#
+# if 50 <= ocena < 60:
+#     print('ok')
+#
+# if ocena >= 50 and ocena < 60:
+#     print('ok')
+
+# from datetime import date
+
+# day_week = ()
+# month = (slownik)
+# print(f'dzisiaj jest {day_week}: {datetime.datetime.now()})
+
+# data = date.today()
+#
+# day_week = {
+#     0: 'poniedziałek',
+#     1: 'wtorek',
+#     2: 'środa',
+#     3: 'czwartek',
+#     4: 'piątek',
+#     5: 'sobota',
+#     6: 'niedziela'
+# }
+# msc = {1: 'stycznia', 2: 'lutego', 3: 'marca', 4: 'kwietnia', 5: 'maja', 6: 'czerwca', 7: 'lipca', 8: 'sierpnia',
+#        9: 'września', 10: 'października', 11: 'listopada', 12: 'grudnia'}
+#
+# print(f'dziś jest {day_week[data.weekday()]} {data.day} {msc[data.month]} {data.year} rok')
+
+
+slownik = {}
+lista_imion = ['iwona', 'dawid', 'ola']
+
+
+def dodaj_imie(imie):
+    counter = 0
+    for i in lista_imion:
+        if i not in slownik:
+            slownik.update({f'imie{counter}': i})
+            counter += 1
+
+
+dodaj_imie(lista_imion)
+print(slownik)
