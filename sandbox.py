@@ -1,4 +1,5 @@
 import pandas
+from pandas import read_json, read_csv
 
 '''
 Przydatne funkcje:
@@ -10,8 +11,7 @@ Przydatne funkcje:
         numerycznych indeksów. Nawet jeżeli indeks wierszy jest ustawiony na region i nawet jeżeli nasze
         kolumny mają nazwy, funkcją iloc przyjmie tylko numery wierszy i kolumn
     🟢 .head() - wyświetli 5 pierwszych rekordów
-    🟢 .tail() - wyświetli 5 ostatnich rekordó
-
+    🟢 .tail() - wyświetli 5 ostatnich rekordów
 '''
 
 koty = pandas.read_csv('koty.csv')
@@ -90,6 +90,17 @@ koty_kopia = koty_kopia.rename(columns={'Nowa kolumna': 'Właściciel'})
 # kostium.set_index('region', inplace=True)
 # print(kostium[(kostium['1'] == 'Rabbit') | (kostium['1'] == 'Dinosaur')])
 
-filmy = pandas.read_csv('oscars.csv')
-f = filmy.category
-print(f[:30])
+# filmy = pandas.read_csv('oscars.csv')
+# f = filmy.category
+# print(f[:30])
+
+films = read_csv('https://analityk.edu.pl/wp-content/uploads/2020/12/film.csv',
+                    sep=';',
+                    encoding = "ISO-8859-1",
+                    skiprows=[1],
+                    dtype={'Length':'float64', 'Popularity':'float64'},
+                    usecols=['Year','Length','Title','Subject','Popularity','Awards'],
+                    converters={'Awards':lambda x: True if x == 'Yes' else False})
+
+
+films.groupby('Year').count()
