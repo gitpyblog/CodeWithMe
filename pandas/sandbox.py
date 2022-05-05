@@ -109,3 +109,7 @@ films = read_csv('https://analityk.edu.pl/wp-content/uploads/2020/12/film.csv',
 # films.set_index('')
 print(films.head(10))
 # print(films.sort_values('Year'))
+
+# 791 915 803
+# 730 stan licznika
+# 00203108 nr gazomierza
