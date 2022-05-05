@@ -1,5 +1,5 @@
 import pandas
-from pandas import read_json, read_csv
+from pandas import read_csv
 
 '''
 Przydatne funkcje:
@@ -14,7 +14,7 @@ Przydatne funkcje:
     🟢 .tail() - wyświetli 5 ostatnich rekordów
 '''
 
-koty = pandas.read_csv('koty.csv')
+koty = pandas.read_csv('pandas/koty.csv')
 
 # Funkcje do odczytu danych to: read_csv(), read_excel(), read_json(), read_pickle(), read_sql()
 # Do zapisu analogicznie służą: to_csv(), to_excel(), to_json(), to_pickle(), to_sql(), to_html()
@@ -95,12 +95,17 @@ koty_kopia = koty_kopia.rename(columns={'Nowa kolumna': 'Właściciel'})
 # print(f[:30])
 
 films = read_csv('https://analityk.edu.pl/wp-content/uploads/2020/12/film.csv',
-                    sep=';',
-                    encoding = "ISO-8859-1",
-                    skiprows=[1],
-                    dtype={'Length':'float64', 'Popularity':'float64'},
-                    usecols=['Year','Length','Title','Subject','Popularity','Awards'],
-                    converters={'Awards':lambda x: True if x == 'Yes' else False})
+                 sep=';',
+                 encoding="ISO-8859-1",
+                 skiprows=[1],
+                 dtype={'Length': 'float64', 'Popularity': 'float64'},
+                 usecols=['Year', 'Length', 'Title', 'Subject', 'Popularity', 'Awards'],
+                 converters={'Awards': lambda x: True if x == 'Yes' else False})
 
-
-films.groupby('Year').count()
+# print(films.groupby('Year').count())
+# print(films.groupby('Year').agg({'Popularity': ['min', 'max'], 'Length': ['min', 'max']}))
+# print(films.Year // 10 * 10) # reg na grupowanie dekad
+# print(films.head(10))
+# films.set_index('')
+print(films.head(10))
+# print(films.sort_values('Year'))
